@@ -3,6 +3,7 @@ import { Container, Col, Row } from 'react-bootstrap';
 
 import HomePage from '../HomePage/homepage';
 import EditMember from '../EditMember/editMember';
+import DeleteMember from '../DeleteMember/deleteMember'
 
 import './mainView.css';
 
@@ -32,7 +33,7 @@ function MainView() {
             <Col sm={1}></Col>
             <Col sm={10} className="customCol mt-5">
                 {/* Router should render various views here. Default should be homepage. */}
-                <EditMember />
+                <DeleteMember />
             </Col>
             <Col sm={1}></Col>
         </Row>
