@@ -6,81 +6,81 @@ import '../AddMember/addMember.css';
 function AddMember() {
     return (
         <Container fluid>
-            <Row>
+            <Row className="mb-5">
                 <Col sm={2}></Col>
                 <Col sm={8} className="text-center customHeader">
                     <h1 className="">New Member</h1>
                 </Col>
                 <Col sm={2}></Col>
             </Row>
-            <Row>
-                <Col sm={12} className="border form-group">
+            <Row className="mt-5">
+                <Col sm={12} className="form-group">
                     <Row>
                         <Col sm={2} className=""></Col>
                         <Col sm={8} className="text-center">
-                            <input type="text" placeholder="First Name" className="formInput my-2" />
+                            <h3 className="dividerTitle">Child's Info</h3>
                         </Col>
                         <Col sm={2}></Col>
+                        <Col sm={6} className="text-right">
+                            <input type="text" placeholder="First Name" className="my-2 inputData text-center" />
+                        </Col>
+                        <Col sm={6} className="text-left">
+                            <input type="text" placeholder="Last Name" className="my-2 inputData text-center" />
+                        </Col>
                     </Row>
                     <Row>
                         <Col sm={2} className=""></Col>
                         <Col sm={8} className="text-center">
-                            <input type="text" placeholder="Last Name" className="formInput my-2" />
+                            <input type="number" placeholder="Child's Age" className="inputData text-center my-2" />
                         </Col>
                         <Col sm={2}></Col>
+                    </Row>
+                    <br></br>
+                    <Row>
+                        <Col sm={2} className=""></Col>
+                        <Col sm={8} className="text-center">
+                            <h3 className="dividerTitle">Guardian's Info</h3>
+                        </Col>
+                        <Col sm={2}></Col>
+                        <Col sm={6} className="text-right">
+                            <input type="text" placeholder="Guardian's First Name" className="my-2 inputData text-center" />
+                        </Col>
+                        <Col sm={6} className="text-left">
+                            <input type="text" placeholder="Guardian's Last Name" className="my-2 inputData text-center" />
+                        </Col>
                     </Row>
                     <Row>
                         <Col sm={2} className=""></Col>
                         <Col sm={8} className="text-center">
-                            <input type="number" placeholder="Child's Age" className="formInput my-2" />
+                            <input type="phone" placeholder="Guardian's Phone" className="my-2 inputData text-center" />
                         </Col>
                         <Col sm={2}></Col>
+                    </Row>
+                    <br></br>
+                    <Row>
+                        <Col sm={2} className=""></Col>
+                        <Col sm={8} className="text-center">
+                            <h3 className="dividerTitle">Guardian's Info</h3>
+                        </Col>
+                        <Col sm={2}></Col>
+                        <Col sm={6} className="text-right">
+                            <input type="text" placeholder="Guardian's First Name" className="my-2 inputData text-center" />
+                        </Col>
+                        <Col sm={6} className="text-left">
+                            <input type="text" placeholder="Guardian's Last Name" className="my-2 inputData text-center" />
+                        </Col>
                     </Row>
                     <Row>
                         <Col sm={2} className=""></Col>
                         <Col sm={8} className="text-center">
-                            <input type="text" placeholder="Guardian's First Name" className="formInput my-2" />
+                            <input type="phone" placeholder="Guardian's Phone" className="my-2 inputData text-center" />
                         </Col>
                         <Col sm={2}></Col>
                     </Row>
-                    <Row>
-                        <Col sm={2} className=""></Col>
-                        <Col sm={8} className="text-center">
-                            <input type="text" placeholder="Guardian's Last Name" className="formInput my-2" />
-                        </Col>
-                        <Col sm={2}></Col>
-                    </Row>
-                    <Row>
-                        <Col sm={2} className=""></Col>
-                        <Col sm={8} className="text-center">
-                            <input type="phone" placeholder="Guardian's Phone" className="formInput my-2" />
-                        </Col>
-                        <Col sm={2}></Col>
-                    </Row>
-                    <Row>
-                        <Col sm={2} className=""></Col>
-                        <Col sm={8} className="text-center">
-                            <input type="text" placeholder="Guardian's First Name" className="formInput my-2" />
-                        </Col>
-                        <Col sm={2}></Col>
-                    </Row>
-                    <Row>
-                        <Col sm={2} className=""></Col>
-                        <Col sm={8} className="text-center">
-                            <input type="text" placeholder="Guardian's Last Name" className="formInput my-2" />
-                        </Col>
-                        <Col sm={2}></Col>
-                    </Row>
-                    <Row>
-                        <Col sm={2} className=""></Col>
-                        <Col sm={8} className="text-center">
-                            <input type="phone" placeholder="Guardian's Phone" className="formInput my-2" />
-                        </Col>
-                        <Col sm={2}></Col>
-                    </Row>
-                    <Row>
+                    <br></br>
+                    <Row className="mt-5">
                         <Col sm={4} className=""></Col>
-                        <Col sm={4} className="text-center">
+                        <Col sm={4} className="my-2 customButton1 text-center">
                             <button type="submit" className="formSubmitBtn">SUBMIT</button>
                         </Col>
                         <Col sm={4}></Col>
