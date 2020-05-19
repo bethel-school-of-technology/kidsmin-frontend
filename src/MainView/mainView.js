@@ -5,6 +5,7 @@ import HomePage from '../HomePage/homepage';
 import EditMember from '../EditMember/editMember';
 import DeleteMember from '../DeleteMember/deleteMember'
 import AddMember from '../AddMember/addMember';
+import AttendPage from '../AttendPage/attendPage'
 
 import './mainView.css';
 
@@ -35,7 +36,7 @@ function MainView() {
             <Col sm={1}></Col>
             <Col sm={10} className="customCol mt-5">
                 {/* Router should render various views here. Default should be homepage. */}
-                <AddMember />
+                <AttendPage />
             </Col>
             <Col sm={1}></Col>
         </Row>

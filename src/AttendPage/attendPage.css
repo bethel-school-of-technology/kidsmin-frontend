@@ -1,0 +1,60 @@
+.divider{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.divider::before, ::after {
+    content: '';
+    display: block;
+    height: 1em;
+    min-width: 50%;
+}
+
+.divider::before {
+    background: linear-gradient(to right, rgba(240,240,240,0), #FE7634);
+    margin-right: 0vh;
+    border-radius: 0em;
+}
+
+.divider::after {
+    background: linear-gradient(to left, rgba(240,240,240,0), #FE7634);
+    margin-left: 0vh;
+    border-radius: 0em;
+} 
+
+.data{
+    max-height: 2.5em;
+}
+
+.customShape2{
+    background-image: url('../img/pow-hi.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 250px;
+    width: 100%;
+    position: absolute;
+}
+
+.layer1{
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.layer2{
+    position: absolute;
+    z-index: 2;
+    align-self: center;
+    justify-self: center;
+    justify-content: center;
+    max-height: 1em;
+}
+
+h1 {
+    max-height: 1em;
+}
