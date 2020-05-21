@@ -4,11 +4,12 @@ import { Container, Row, Col } from "react-bootstrap";
 import './homepage.css';
 
 const members = [
-    {id: "1", fName: "Steve", lName: "Dot"},
-    {id: "2", fName: "Ashley", lName: "Rose"},
-    {id: "3", fName: "John", lName: "Doe"},
-    {id: "4", fName: "Nate", lName: "McCollam"}
+    {idmembers: "1", firstName: "Steve", lastName: "Dot", guardianNameFirst: "Mr.", guardianNameLast: "Parent", guardianPhone: "123-456-7890", membersAge: "7"},
+    {idmembers: "2", firstName: "Ashley", lastName: "Rose", guardianNameFirst: "Mr.", guardianNameLast: "Parent", guardianPhone: "123-456-7890", membersAge: "10"},
+    {idmembers: "3", firstName: "John", lastName: "Doe", guardianNameFirst: "Mr.", guardianNameLast: "Parent", guardianPhone: "123-456-7890", membersAge: "4"},
+    {idmembers: "4", firstName: "Nate", lastName: "McCollam", guardianNameFirst: "Mr.", guardianNameLast: "Parent", guardianPhone: "123-456-7890", membersAge: "29"}
 ]
+
 
 function HomePage() {
     return (
@@ -16,8 +17,8 @@ function HomePage() {
             <Row>
                 <Col sm={1}></Col>
                 <Col sm={4} className="text-center">
-                    <div className="customShape ml-3">
-                        <h2>3</h2>
+                    <div className="customShape ml-3 layer1">
+                        <h2 className="layer2">3</h2>
                         {/* This number should represent how many members are in database. */}
                     </div>
                 </Col>
@@ -27,15 +28,18 @@ function HomePage() {
                 <Col sm={1}></Col>
             </Row>
             <Row>
-                <Col sm={12} className="text-center">
+                <Col sm={12} className="text-center mt-5">
                     {members.map(member => {
                         return(
-                            <Row key={member.id} className="data mt-5 pt-3">
+                            <Row key={member.id} className="namePlate mt-5">
                                 <Col sm={1}></Col>
-                                <Col sm={2} className="text-center">
-                                    <div className="checkbox rounded"></div>
+                                <Col sm={2} className="text-center checkboxContainer">
+                                    <input type="checkbox" className="checkbox rounded mt-4 mb-2"></input>
+                                    <span className="checkmark"></span> 
                                 </Col>
-                                <Col sm={8} className="text-center namePlate">{member.fName + " " + member.lName}</Col>
+                                <Col sm={8} className="text-center mt-3">
+                                    <h4>{member.firstName + " " + member.lastName}</h4>
+                                </Col>
                                 <Col sm={1}></Col>
                             </Row>
                         );

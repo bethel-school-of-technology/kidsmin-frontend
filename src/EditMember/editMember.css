@@ -2,25 +2,47 @@
     background-color: #FE7634;
     border: black solid 7px;
     border-radius: 0.5em;
-    display: table;
-    position: inline-block;
+    /* display: table;
+    position: inline-block; */
     transition: all .2s ease-in-out;
+    font-size: 1em;
+    color: #f2ac34;
+    width: 100%
 }
 
 .customButton2:hover{
     transform: scale(1.1);
     background-color: #f2ac34;
+    color: #FE7634;
 }
 
 .namePlate{
-    font-size: 1.25em;
-    display: table;
+    background: white;
+    border: black solid 0.75em;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 1em;
+    height: 8em;
+}
+
+h4{
+    font-size: 4em;
+    font-family: 'Bangers', cursive;
+    font-weight: bolder;
+    color: #f2ac34;
+    /* text-shadow: 3px 4px black; */
+    -webkit-text-stroke: 3px black;
 }
 
 .edit{
-    font-size: 1em;
+    height: 2em;
+    font-size: 2em;
+    font-family: 'Bangers', cursive;
+    font-weight: bolder;
     display: table-cell;
     position: inline-block;
+    -webkit-text-stroke: 2px black;
     transition: all .2s ease-in-out;
 }
 
@@ -61,13 +83,6 @@
     display: table-cell
 }
 
-.find{
-    font-size: 3em;
-    display: table-cell;
-    position: inline-block;
-    transition: all .2s ease-in-out;
-}
-
-.find:hover{
-    color: #FE7634;
+.links {
+    text-decoration: none !important;
 }

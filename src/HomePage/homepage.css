@@ -10,6 +10,24 @@
     display: table;
 }
 
+.layer1{
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.layer2{
+    position: absolute;
+    z-index: 2;
+    align-self: center;
+    justify-self: center;
+    justify-content: center;
+    max-height: 1em;
+}
+
 h2{
     position: inline-block;
     display: table-cell;
@@ -33,6 +51,7 @@ h2{
     /* text-shadow: 3px 4px black; */
     -webkit-text-stroke: 3px black;
     border-radius: 0.5em;
+    height: 2em;
 }
 
 .checkbox{
@@ -47,10 +66,12 @@ h2{
     background-color: #FE7634;
     border: black solid 10px;
     border-radius: 1em;
-    width: 100%;
-    height: 100%;
+    /* width: 100%; */
+    height: 1em;
     display: table;
     transition: all .2s ease-in-out;
+    vertical-align: center;
+    justify-content: center;
 }
 
 .customButton1:hover{

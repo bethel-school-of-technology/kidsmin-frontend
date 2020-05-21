@@ -4,12 +4,11 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import App from './App';
-import MainView from './MainView/mainView'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <MainView />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

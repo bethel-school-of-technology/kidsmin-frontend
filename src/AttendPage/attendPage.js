@@ -34,13 +34,15 @@ function AttendPage() {
                 </Col>
                 <Col sm={12} className="divider"></Col>
             </Row>
-            <Row>
+            <Row className="mt-5">
                 {/* Attendance Col */}
                 <Col sm={6}>
                     {members.filter(member => member.attend === true).map(attending => {
                         return(
-                            <Row key={attending.id} className="data mt-5">
-                                <Col sm={12} className="text-center namePlate">{attending.fName + " " + attending.lName}</Col>
+                            <Row key={attending.id} className="namePlate mt-5">
+                                <Col sm={12} className="text-center mt-3">
+                                    <h4>{attending.fName + " " + attending.lName}</h4>
+                                </Col>
                             </Row>
                         );
                     })}
@@ -50,8 +52,10 @@ function AttendPage() {
                 <Col sm={6}>
                     {members.filter(member => member.attend === false).map(absent => {
                         return(
-                            <Row key={absent.id} className="data mt-5">
-                                <Col sm={12} className="text-center namePlate">{absent.fName + " " + absent.lName}</Col>
+                            <Row key={absent.id} className="namePlate mt-5">
+                                <Col sm={12} className="text-center mt-3">
+                                    <h4>{absent.fName + " " + absent.lName}</h4>
+                                </Col>
                             </Row>
                         );
                     })}

@@ -1,15 +1,24 @@
 import React from 'react';
 import { Container, Row, Col } from "react-bootstrap";
 
-import './addMember.css';
+import '../AddMember/addMember.css';
 
-function AddMember() {
+const members = [
+    {membersid: "1", firstName: "Steve", lastName: "Dot", guardianNameFirst: "Mr.", guardianNameLast: "Parent", guardianPhone: "123-456-7890", membersAge: "7"},
+    {membersid: "2", firstName: "Ashley", lastName: "Rose", guardianNameFirst: "Mr.", guardianNameLast: "Parent", guardianPhone: "123-456-7890", membersAge: "10"},
+    {membersid: "3", firstName: "John", lastName: "Doe", guardianNameFirst: "Mr.", guardianNameLast: "Parent", guardianPhone: "123-456-7890", membersAge: "4"},
+    {membersid: "4", firstName: "Nate", lastName: "McCollam", guardianNameFirst: "Mr.", guardianNameLast: "Parent", guardianPhone: "123-456-7890", membersAge: "29"}
+]
+
+const EditMemberDetails = () => {
+
+
     return (
         <Container fluid>
             <Row className="mb-5">
                 <Col sm={2}></Col>
                 <Col sm={8} className="text-center customHeader">
-                    <h1 className="">New Member</h1>
+                    <h1 className="">Edit {members.firstName}'s Info</h1>
                 </Col>
                 <Col sm={2}></Col>
             </Row>
@@ -22,16 +31,16 @@ function AddMember() {
                         </Col>
                         <Col sm={2}></Col>
                         <Col sm={6} className="text-right">
-                            <input type="text" placeholder="First Name" className="my-2 inputData text-center" />
+                            <input type="text" placeholder={members.firstName} className="my-2 inputData text-center" />
                         </Col>
                         <Col sm={6} className="text-left">
-                            <input type="text" placeholder="Last Name" className="my-2 inputData text-center" />
+                            <input type="text" placeholder={members.lastName} className="my-2 inputData text-center" />
                         </Col>
                     </Row>
                     <Row>
                         <Col sm={2} className=""></Col>
                         <Col sm={8} className="text-center">
-                            <input type="number" placeholder="Child's Age" className="inputData text-center my-2" />
+                            <input type="number" placeholder={members.membersAge} className="inputData text-center my-2" />
                         </Col>
                         <Col sm={2}></Col>
                     </Row>
@@ -43,16 +52,16 @@ function AddMember() {
                         </Col>
                         <Col sm={2}></Col>
                         <Col sm={6} className="text-right">
-                            <input type="text" placeholder="Guardian's First Name" className="my-2 inputData text-center" />
+                            <input type="text" placeholder={members.guardianNameFirst} className="my-2 inputData text-center" />
                         </Col>
                         <Col sm={6} className="text-left">
-                            <input type="text" placeholder="Guardian's Last Name" className="my-2 inputData text-center" />
+                            <input type="text" placeholder={members.guardianNameLast} className="my-2 inputData text-center" />
                         </Col>
                     </Row>
                     <Row>
                         <Col sm={2} className=""></Col>
                         <Col sm={8} className="text-center">
-                            <input type="phone" placeholder="Guardian's Phone" className="my-2 inputData text-center" />
+                            <input type="phone" placeholder={members.guardianPhone} className="my-2 inputData text-center" />
                         </Col>
                         <Col sm={2}></Col>
                     </Row>
@@ -64,16 +73,16 @@ function AddMember() {
                         </Col>
                         <Col sm={2}></Col>
                         <Col sm={6} className="text-right">
-                            <input type="text" placeholder="Guardian's First Name" className="my-2 inputData text-center" />
+                            <input type="text" placeholder={members.guardianNameFirst2} className="my-2 inputData text-center" />
                         </Col>
                         <Col sm={6} className="text-left">
-                            <input type="text" placeholder="Guardian's Last Name" className="my-2 inputData text-center" />
+                            <input type="text" placeholder={members.guardianNameLast2} className="my-2 inputData text-center" />
                         </Col>
                     </Row>
                     <Row>
                         <Col sm={2} className=""></Col>
                         <Col sm={8} className="text-center">
-                            <input type="phone" placeholder="Guardian's Phone" className="my-2 inputData text-center" />
+                            <input type="phone" placeholder={members.guardianPhone2} className="my-2 inputData text-center" />
                         </Col>
                         <Col sm={2}></Col>
                     </Row>
@@ -81,7 +90,7 @@ function AddMember() {
                     <Row className="mt-5">
                         <Col sm={4} className=""></Col>
                         <Col sm={4} className="my-2 text-center">
-                            <button type="submit" className=" formSubmitBtn">SUBMIT</button>
+                            <button type="submit" className="formSubmitBtn">Update</button>
                         </Col>
                         <Col sm={4}></Col>
                     </Row>
@@ -91,4 +100,4 @@ function AddMember() {
     );
 }
 
-export default AddMember;
+export default EditMemberDetails;

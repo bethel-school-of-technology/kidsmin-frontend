@@ -4,28 +4,25 @@
     align-items: center;    
 }
 
-.divider::before, ::after {
+.divider::before {
+    background: linear-gradient(to right, rgba(240,240,240,0), #FE7634);
+    margin-right: 0vh;
+    border-radius: 0em;
     content: '';
     display: block;
     height: 1em;
     min-width: 50%;
 }
 
-.divider::before {
-    background: linear-gradient(to right, rgba(240,240,240,0), #FE7634);
-    margin-right: 0vh;
-    border-radius: 0em;
-}
-
 .divider::after {
     background: linear-gradient(to left, rgba(240,240,240,0), #FE7634);
     margin-left: 0vh;
     border-radius: 0em;
+    content: '';
+    display: block;
+    height: 1em;
+    min-width: 50%;
 } 
-
-.data{
-    max-height: 2.5em;
-}
 
 .customShape2{
     background-image: url('../img/pow-hi.png');
