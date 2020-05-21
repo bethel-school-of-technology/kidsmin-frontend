@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import './attendPage.css';
 
+
 const members = [
     {id: "1", fName: "Steve", lName: "Dot", attend: true},
     {id: "2", fName: "Ashley", lName: "Rose", attend: false},
@@ -10,13 +11,14 @@ const members = [
     {id: "4", fName: "Nate", lName: "McCollam", attend: false}
 ]
 
-function AttendPage() {
+function AttendPage() { 
+
     return (
         <Container fluid>
             <Row className="mt-5">
                 <Col sm={3} className="text-center">
                     <div className="customShape2 layer1">
-                        <h2 className="layer2">3</h2>
+                        <h2 className="layer2">2</h2>
                         {/* This number should represent how many members are attending */}
                     </div>
                 </Col>
@@ -28,7 +30,7 @@ function AttendPage() {
                 </Col>
                 <Col sm={3} className="text-center">
                     <div className="customShape2 layer1 text-center">
-                        <h2 className="layer2">12</h2>
+                        <h2 className="layer2">2</h2>
                         {/* This number should represent how many members are absent */}
                     </div>
                 </Col>

@@ -24,10 +24,7 @@ function EditMember() {
             <Row className="data">
                 <Col sm={1}></Col>
                 <Col sm={10} className="searchBar">
-                    <div className="form-group has-search">
-                        <span className="fas fa-search form-control-feedback"></span>
-                        <input type="text" className="form-control" placeholder="Search"></input>
-                    </div>
+                    <input type="text" id="searchInput" placeholder="Search Child's Name"></input>
                 </Col>
                 <Col sm={1}></Col>
             </Row>

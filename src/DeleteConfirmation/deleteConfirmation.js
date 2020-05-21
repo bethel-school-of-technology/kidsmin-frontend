@@ -34,10 +34,10 @@ function DeleteConfirmation() {
                         </Col>
                         <Col sm={2}></Col>
                         <Col sm={6} className="text-right">
-                            <input type="text" placeholder={name.firstName} className="my-2 inputData text-center" />
+                            <input type="text" placeholder={name.fname} className="my-2 inputData text-center" />
                         </Col>
                         <Col sm={6} className="text-left">
-                            <input type="text" placeholder={name.lastName} className="my-2 inputData text-center" />
+                            <input type="text" placeholder={name.lname} className="my-2 inputData text-center" />
                         </Col>
                     </Row>
                 </Col>
@@ -51,7 +51,6 @@ function DeleteConfirmation() {
                 <Col sm={4}></Col>
             </Row>
         </Container>
-
     );
 }
 

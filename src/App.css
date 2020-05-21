@@ -3,7 +3,7 @@
   min-height: 85vh;
   border: solid black 10px;
   border-radius: 1em;
-  box-shadow: 30px 30px #00000090;
+  box-shadow: 25px 25px 10px #00000090;
 }
 
 h1{
@@ -62,7 +62,7 @@ h7:hover{
   border-bottom: solid black 10px;
   border-bottom-right-radius: 1em;    
   border-bottom-left-radius: 1em;  
-  box-shadow: 6px 6px #00000090;
+  box-shadow: 12px 12px 5px #00000090;
   min-height: 5vh;
 }
 

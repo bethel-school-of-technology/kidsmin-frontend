@@ -18,11 +18,11 @@ function HomePage() {
                 <Col sm={1}></Col>
                 <Col sm={4} className="text-center">
                     <div className="customShape ml-3 layer1">
-                        <h2 className="layer2">3</h2>
+                        <h2 className="layer2">4</h2>
                         {/* This number should represent how many members are in database. */}
                     </div>
                 </Col>
-                <Col sm={6} className="text-center customHeader">
+                <Col sm={6} className="text-left customHeader ml-5">
                     <h1 className="">Members</h1>
                 </Col>
                 <Col sm={1}></Col>
