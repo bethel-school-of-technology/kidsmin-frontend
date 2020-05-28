@@ -2,13 +2,13 @@ import React from 'react';
 import { Container, Col, Row } from 'react-bootstrap';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 
-import HomePage from './HomePage/homepage';
-import EditMember from './EditMember/editMember';
-import DeleteMember from './DeleteMember/deleteMember';
-import AddMember from './AddMember/addMember';
-import AttendPage from './AttendPage/attendPage';
-import EditMemberDetails from './EditMemberDetails/editMemberDetails';
-import DeleteConfirmation from './DeleteConfirmation/deleteConfirmation';
+import HomePage from './Components/HomePage/homepage';
+import EditMember from './Components/EditMember/editMember';
+import DeleteMember from './Components/DeleteMember/deleteMember';
+import AddMember from './Components/AddMember/addMember';
+import AttendPage from './Components/AttendPage/attendPage';
+import EditMemberDetails from './Components/EditMemberDetails/editMemberDetails';
+import DeleteConfirmation from './Components/DeleteConfirmation/deleteConfirmation';
 
 import './App.css';
 

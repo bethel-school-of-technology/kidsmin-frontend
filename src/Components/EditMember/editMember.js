@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from 'react-router-dom';
 
-import '../EditMember/editMember.css';
+import './editMember.css';
 
 const members = [
     {idmembers: "1", firstName: "Steve", lastName: "Dot", guardianNameFirst: "Mr.", guardianNameLast: "Parent", guardianPhone: "123-456-7890", membersAge: "7"},

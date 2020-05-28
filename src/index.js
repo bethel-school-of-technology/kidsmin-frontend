@@ -5,8 +5,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import AuthenticatedComponent from './Authorization/authenticatedComponent'
-import Login from './Login/login';
+import AuthenticatedComponent from './Components/Authorization/authenticatedComponent'
+import Login from './Components/Authorization/Login/login';
 import App from './App'
 import * as serviceWorker from './serviceWorker';
 
