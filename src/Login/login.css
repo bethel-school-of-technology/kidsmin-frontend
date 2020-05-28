@@ -1,0 +1,88 @@
+.backgroundContainer{
+    background-image: linear-gradient(#fe7734b4, #f2ac34b4);
+    min-height: 100vh;
+}
+
+#loginTitle{
+    -webkit-text-stroke: 4px black;
+    margin-top: 3vh;
+}
+
+#loginTitle2{
+    color: #FE7634;
+}
+
+.loginCol1{
+    background-image: linear-gradient(#1E486C 25%, #26A250 90%);
+    min-height: 20vh;
+    border: solid black 10px;
+    border-radius: 1em;
+    box-shadow: 25px 25px 10px #00000090;
+}
+
+.loginCol{
+    background-image: linear-gradient(#1E486C 25%, #26A250 90%);
+    min-height: 55vh;
+    border: solid black 10px;
+    border-radius: 1em;
+    box-shadow: 25px 25px 10px #00000090;
+}
+
+.inputData {
+    background: white;
+    border: black solid 0.20em;
+    font-family: 'Bangers', cursive;
+    font-weight: bolder;
+    color: #f2ac34;
+    font-size: 3em;
+    /* text-shadow: 3px 4px black; */
+    -webkit-text-stroke: 3px black;
+    border-radius: 0.5em;
+}
+
+.inputData::placeholder {
+    color: #B2DB34;
+    font-size: 0.75em;
+    -webkit-text-stroke: 2px black;
+    opacity: 70%;
+}
+
+.loginBtn {
+    background: #FE7634;
+    border: solid black 0.25em;
+    border-radius: 0.5em;
+    font-family: 'Bangers', cursive;
+    font-weight: bolder;
+    height: 2em;
+    width: 100%;
+    color: #f2ac34;
+    font-size: 3em;
+    /* text-shadow: 3px 4px black; */
+    -webkit-text-stroke: 3px black;
+    margin: 0em;
+    transition: .2s ease-in-out;
+}
+
+.loginBtn:hover{
+    background: #f2ac34;
+    color: #FE7634;
+    transform: scale(1.1);
+}
+
+h1{
+    font-family: 'Bangers', cursive;
+    font-weight: bolder;
+    color: #f2ac34;
+    font-size: 6em;
+    /* text-shadow: 3px 4px black; */
+    -webkit-text-stroke: 3px black;
+  }
+  
+  h2{
+    font-family: 'Bangers', cursive;
+    font-weight: bolder;
+    color: #FE7634;
+    font-size: 6em;
+    /* text-shadow: 3px 4px black; */
+    -webkit-text-stroke: 3px black;
+  }

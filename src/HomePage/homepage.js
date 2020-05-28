@@ -11,7 +11,7 @@ const members = [
 ]
 
 
-function HomePage() {
+function HomePage( props ) {
     return (
         <Container fluid>
             <Row>
