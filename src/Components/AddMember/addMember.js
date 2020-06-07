@@ -1,18 +1,32 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Container, Row, Col } from "react-bootstrap";
 
 import './addMember.css';
 
 function AddMember() {
-   
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        const data = new FormData(event.target);
+
+    const [post] = useState([]);
+
+    const handleSubmit = async (event) => {
+        try{
+            await fetch('https://localhost:3000/members/', {
+                method: "POST",
+                body: {
+                    content: post,
+                    deleted: false
+                }
+            })
+        } catch(event){
+            console.log(event);
+        }
         
-        fetch('http://localhost:3000/members/', {
-          method: 'POST',
-          body: data
-        }); 
+        // event.preventDefault();
+        // const data = new FormData(event.target);
+        // console.log(data);
+        // fetch('http://localhost:3000/members/', {
+        //   method: 'POST',
+        //   body: data
+        // });
     }
 
     return (
@@ -104,5 +118,6 @@ function AddMember() {
         </Container>
     );
 }
+
 
 export default AddMember;

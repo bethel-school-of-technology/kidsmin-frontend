@@ -16,8 +16,6 @@ import './App.css';
 
 function App() {
 
-    const getMembers()
-
     // If not logged in return this code
     // return (
     //     <Login />
