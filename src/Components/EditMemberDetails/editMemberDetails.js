@@ -10,9 +10,8 @@ const members = [
     {membersid: "4", firstName: "Nate", lastName: "McCollam", guardianNameFirst: "Mr.", guardianNameLast: "Parent", guardianPhone: "123-456-7890", membersAge: "29"}
 ]
 
+
 const EditMemberDetails = () => {
-
-
     return (
         <Container fluid>
             <Row className="mb-5">
@@ -65,7 +64,8 @@ const EditMemberDetails = () => {
                         </Col>
                         <Col sm={2}></Col>
                     </Row>
-                    <br></br>
+                    {/* THis info is if we add a 2nd guardian */}
+                    {/* <br></br>
                     <Row>
                         <Col sm={2} className=""></Col>
                         <Col sm={8} className="text-center">
@@ -85,7 +85,7 @@ const EditMemberDetails = () => {
                             <input type="phone" placeholder={members.guardianPhone2} className="my-2 inputData text-center" />
                         </Col>
                         <Col sm={2}></Col>
-                    </Row>
+                    </Row> */}
                     <br></br>
                     <Row className="mt-5">
                         <Col sm={4} className=""></Col>

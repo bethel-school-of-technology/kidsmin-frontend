@@ -5,13 +5,13 @@ import './attendPage.css';
 
 
 const members = [
-    {id: "1", fName: "Steve", lName: "Dot", attend: true},
+    {id: "1", fName: "Steve", lName: "Dot", attend: false},
     {id: "2", fName: "Ashley", lName: "Rose", attend: false},
-    {id: "3", fName: "John", lName: "Doe", attend: true},
-    {id: "4", fName: "Nate", lName: "McCollam", attend: false}
+    {id: "3", fName: "John", lName: "Doe", attend: false},
+    {id: "4", fName: "Nate", lName: "McCollam", attend: true}
 ]
 
-function AttendPage() { 
+function AttendPage() {
 
     return (
         <Container fluid>
@@ -41,7 +41,7 @@ function AttendPage() {
                 <Col sm={6}>
                     {members.filter(member => member.attend === true).map(attending => {
                         return(
-                            <Row key={attending.id} className="namePlate mt-5">
+                            <Row key={attending.id} className="namePlate mt-5 mb-3">
                                 <Col sm={12} className="text-center mt-3">
                                     <h4>{attending.fName + " " + attending.lName}</h4>
                                 </Col>
@@ -54,7 +54,7 @@ function AttendPage() {
                 <Col sm={6}>
                     {members.filter(member => member.attend === false).map(absent => {
                         return(
-                            <Row key={absent.id} className="namePlate mt-5">
+                            <Row key={absent.id} className="namePlate mt-5 mb-3">
                                 <Col sm={12} className="text-center mt-3">
                                     <h4>{absent.fName + " " + absent.lName}</h4>
                                 </Col>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Container, Col, Row } from 'react-bootstrap';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 
@@ -9,11 +9,18 @@ import AddMember from './Components/AddMember/addMember';
 import AttendPage from './Components/AttendPage/attendPage';
 import EditMemberDetails from './Components/EditMemberDetails/editMemberDetails';
 import DeleteConfirmation from './Components/DeleteConfirmation/deleteConfirmation';
+import Login from './Components/Authorization/Login/login';
 
 import './App.css';
 
 
 function App() {
+    // If not logged in return this code
+    // return (
+    //     <Login />
+    // );
+
+    // If logged in return this code
     return (
     <Router>
     <Container fluid className="backgroundContainer">
@@ -44,10 +51,10 @@ function App() {
                     <Route exact path="/add" component={AddMember} />
                     <Route exact path="/delete" component={DeleteMember} />
                     <Route path="/attendance" component={AttendPage} />
-                    <Route path="/edit/:idmembers" component={EditMemberDetails} />
+                    <Route path="/edit/:idmembers"  component={EditMemberDetails} />
                     <Route path="/delete/:idmembers" component={DeleteConfirmation} />
                     <Route default path="/members" component={HomePage} />
-                    <Route path="*" component={() => "404 NOT FOUND"} />
+                    <Route path="/*" component={() => "404 NOT FOUND"} />
                 </Switch>
             </Col>
             <Col sm={1}></Col>
