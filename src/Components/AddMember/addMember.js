@@ -8,6 +8,7 @@ function AddMember() {
     const [post] = useState([]);
 
     const handleSubmit = async (event) => {
+        event.preventDefault();
         try{
             await fetch('https://localhost:3000/members/', {
                 method: "POST",
