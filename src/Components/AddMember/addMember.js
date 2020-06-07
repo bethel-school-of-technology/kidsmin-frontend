@@ -4,16 +4,12 @@ import { Container, Row, Col } from "react-bootstrap";
 import './addMember.css';
 
 function AddMember() {
-    // constructor() {
-    //     super();
-    //     this.handleSubmit = this.handleSubmit.bind(this);
-    // }
-     
+   
     const handleSubmit = (event) => {
         event.preventDefault();
         const data = new FormData(event.target);
         
-        fetch('/api/form-submit-url', {
+        fetch('http://localhost:3000/members/', {
           method: 'POST',
           body: data
         }); 

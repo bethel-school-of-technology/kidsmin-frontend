@@ -9,12 +9,15 @@ import AddMember from './Components/AddMember/addMember';
 import AttendPage from './Components/AttendPage/attendPage';
 import EditMemberDetails from './Components/EditMemberDetails/editMemberDetails';
 import DeleteConfirmation from './Components/DeleteConfirmation/deleteConfirmation';
-import Login from './Components/Authorization/Login/login';
+// import Login from './Components/Authorization/Login/login';
 
 import './App.css';
 
 
 function App() {
+
+    const getMembers()
+
     // If not logged in return this code
     // return (
     //     <Login />
