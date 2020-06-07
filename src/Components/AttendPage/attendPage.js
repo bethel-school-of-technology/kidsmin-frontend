@@ -5,7 +5,7 @@ import './attendPage.css';
 
 
 const members = [
-    {id: "1", fName: "Steve", lName: "Dot", attend: false},
+    {id: "1", fName: "Steve", lName: "Dot", attend: true},
     {id: "2", fName: "Ashley", lName: "Rose", attend: false},
     {id: "3", fName: "John", lName: "Doe", attend: false},
     {id: "4", fName: "Nate", lName: "McCollam", attend: true}

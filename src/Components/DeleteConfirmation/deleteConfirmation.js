@@ -6,37 +6,37 @@ import { Redirect } from 'react-router-dom';
 
 
 // Will need to get the idmembers from param and then get that user from database to confirm name before deletion
-const memberid = this.props.match.params.idmembers
-const member =
-    fetch('/api/form-submit-url', {
-        method: 'GET', 
-        body: memberid
-  });
-// const name = {fname: "steve", lname: "dot"};
+// const memberid = this.props.match.params.idmembers
+// const member =
+//     fetch('/api/form-submit-url', {
+//         method: 'GET', 
+//         body: memberid
+//   });
+const name = {fname: "steve", lname: "dot"};
 
 function DeleteConfirmation() {
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        const data = new FormData(event.target);
+    // const handleSubmit = (event) => {
+    //     event.preventDefault();
+    //     const data = new FormData(event.target);
         
-        if (member.firstName + member.lastName === data.firstName + data.lastName) {
-            fetch('/api/form-submit-url', {
-                method: 'DELETE',
-                body: memberid
-              }).then(<Redirect to="/delete" />)
-        } else {
-            alert("Child's name doesn't match. Please try again.");
-        }
+    //     if (member.firstName + member.lastName === data.firstName + data.lastName) {
+    //         fetch('/api/form-submit-url', {
+    //             method: 'DELETE',
+    //             body: memberid
+    //           }).then(<Redirect to="/delete" />)
+    //     } else {
+    //         alert("Child's name doesn't match. Please try again.");
+    //     }
         // if/else statement. if inputs = members name then run delete method
        
-    }
+    // }
 
     return (
         <Container fluid>
             <Row className="mt-3 mb-5">
                 <Col sm={1}></Col>
                 <Col sm={10} className="text-center">
-                    <h1>Delete {member.firstName + " " + member.lastName}</h1>
+                    <h1>Delete {name.firstName + " " + name.lastName}</h1>
                 </Col>
                 <Col sm={1}></Col>
             </Row>
@@ -49,7 +49,7 @@ function DeleteConfirmation() {
                 </Col>
                 <Col sm={2}></Col>
             </Row>
-        <form onSubmit={handleSubmit}>
+        <form>
             <Row className="text-center">
                 <Col sm={12} className="form-group text-center">
                     <Row className="text-center">
@@ -59,10 +59,10 @@ function DeleteConfirmation() {
                         </Col>
                         <Col sm={2}></Col>
                         <Col sm={6} className="text-right">
-                            <input type="text" placeholder={member.firstName} name="firstName" className="my-2 inputData text-center" />
+                            <input type="text" placeholder={name.firstName} name="firstName" className="my-2 inputData text-center" />
                         </Col>
                         <Col sm={6} className="text-left">
-                            <input type="text" placeholder={member.lastName} name="lastName" className="my-2 inputData text-center" />
+                            <input type="text" placeholder={name.lastName} name="lastName" className="my-2 inputData text-center" />
                         </Col>
                     </Row>
                 </Col>
@@ -80,4 +80,4 @@ function DeleteConfirmation() {
     );
 }
 
-export default DeleteConfirmation
+export default DeleteConfirmation;
