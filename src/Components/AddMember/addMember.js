@@ -1,24 +1,21 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { Container, Row, Col } from "react-bootstrap";
 
 import './addMember.css';
 
 function AddMember() {
 
-    const [post] = useState([]);
-
-    const handleSubmit = async (event) => {
-        try{
-            await fetch('https://localhost:3000/members/', {
-                method: "POST",
-                body: {
-                    content: post,
-                    deleted: false
-                }
-            })
-        } catch(event){
-            console.log(event);
-        }
+    //const [data] = setState([]); 
+  
+ const handleSubmit= (event) => {
+    event.preventDefault();  
+    const data = new FormData(event.target);
+    console.log(data); 
+    fetch('http://localhost:3000/members/',{
+        method: 'POST', 
+        body: data
+    });
+   }
         
         // event.preventDefault();
         // const data = new FormData(event.target);
@@ -27,7 +24,7 @@ function AddMember() {
         //   method: 'POST',
         //   body: data
         // });
-    }
+}
 
     return (
         <Container fluid>
@@ -117,7 +114,7 @@ function AddMember() {
         </form>
         </Container>
     );
-}
+
 
 
 export default AddMember;
