@@ -1,76 +1,414 @@
-.customCol{
-  background-image: linear-gradient(#1E486C 25%, #26A250 90%);
-  min-height: 85vh;
-  border: solid black 10px;
-  border-radius: 1em;
-  box-shadow: 25px 25px 10px #00000090;
+/* // Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+/* App default */
+  h1{
+    font-family: 'Bangers', cursive;
+    font-weight: bolder;
+    color: #f2ac34;
+    font-size: 4em;
+    /* text-shadow: 3px 4px black; */
+    -webkit-text-stroke: 2px black;
+  }
+
+  h2{
+    font-family: 'Bangers', cursive;
+    font-weight: bolder;
+    color: #FE7634;
+    font-size: 4em;
+    /* text-shadow: 3px 4px black; */
+    -webkit-text-stroke: 2px black;
+  }
+
+  .customLink{
+    font-family: 'Bangers', cursive;
+    font-size: 24px;
+    letter-spacing: 2px;
+    color: #f2ac34;
+    -webkit-text-stroke: 1px black;
+    margin-top: 1%;
+    transition: all .2s ease-in-out;
+  }
+
+  .customLink:hover{
+    color: #FE7634;
+    transform: scale(1.1);
+  }
+
+  .navContainer{
+    background-image: linear-gradient(#1E486C 25%, #26A250 90%);
+    border-left: solid black 10px;
+    border-right: solid black 10px;
+    border-bottom: solid black 10px;
+    border-bottom-right-radius: 1em;    
+    border-bottom-left-radius: 1em;  
+    box-shadow: 12px 12px 5px #00000090;
+    min-height: 5vh;
+  }
+
+  .backgroundContainer{
+    background-image: linear-gradient(#fe7734b4, #f2ac34b4);
+    min-height: 100vh;
+  }
+
+  .links{
+    text-decoration: none !important;
+  }
+
+  .customCol{
+    background-image: linear-gradient(#1E486C 25%, #26A250 90%);
+    min-height: 85vh;
+    border: solid black 10px;
+    border-radius: 1em;
+    box-shadow: 25px 25px 10px #00000090;
+  }
+  
+  h6 {
+    font-family: 'Bangers', cursive;
+    font-weight: bolder;
+    color: #f2ac34;
+    font-size: 1.15em;
+    /* text-shadow: 3px 4px black; */
+    -webkit-text-stroke: 1px black;
+    transition: all .2s ease-in-out;
+  }
+  
+  h6:hover{
+    color: #FE7634;
+    transform: scale(1.1);
+    text-decoration: none;
+  }
 }
 
-h1{
-  font-family: 'Bangers', cursive;
-  font-weight: bolder;
-  color: #f2ac34;
-  font-size: 6em;
-  /* text-shadow: 3px 4px black; */
-  -webkit-text-stroke: 3px black;
+
+
+
+
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  /* App Small */
+  .customCol{
+    background-image: linear-gradient(#1E486C 25%, #26A250 90%);
+    min-height: 85vh;
+    border: solid black 10px;
+    border-radius: 1em;
+    box-shadow: 25px 25px 10px #00000090;
+  }
+  
+  h1{
+    font-family: 'Bangers', cursive;
+    font-weight: bolder;
+    color: #f2ac34;
+    font-size: 6em;
+    /* text-shadow: 3px 4px black; */
+    -webkit-text-stroke: 3px black;
+  }
+  
+  h2{
+    font-family: 'Bangers', cursive;
+    font-weight: bolder;
+    color: #FE7634;
+    font-size: 6em;
+    /* text-shadow: 3px 4px black; */
+    -webkit-text-stroke: 3px black;
+  }
+  
+  h6 {
+    font-family: 'Bangers', cursive;
+    font-weight: bolder;
+    color: #f2ac34;
+    font-size: 1.5em;
+    /* text-shadow: 3px 4px black; */
+    -webkit-text-stroke: 1px black;
+    transition: all .2s ease-in-out;
+  }
+  
+  h6:hover{
+    color: #FE7634;
+    transform: scale(1.1);
+    text-decoration: none;
+  }
+  
+  .customLink{
+    font-family: 'Bangers', cursive;
+    font-size: 24px;
+    letter-spacing: 2px;
+    color: #f2ac34;
+    -webkit-text-stroke: 1px black;
+    margin-top: 1%;
+    transition: all .2s ease-in-out;
+  }
+  
+  .customLink:hover{
+    color: #FE7634;
+    transform: scale(1.1);
+  }
+  
+  .navContainer{
+    background-image: linear-gradient(#1E486C 25%, #26A250 90%);
+    border-left: solid black 10px;
+    border-right: solid black 10px;
+    border-bottom: solid black 10px;
+    border-bottom-right-radius: 1em;    
+    border-bottom-left-radius: 1em;  
+    box-shadow: 12px 12px 5px #00000090;
+    min-height: 5vh;
+  }
+  
+  .backgroundContainer{
+    background-image: linear-gradient(#fe7734b4, #f2ac34b4);
+    min-height: 100vh;
+  }
+  
+  .links{
+    text-decoration: none !important;
+  }
 }
 
-h2{
-  font-family: 'Bangers', cursive;
-  font-weight: bolder;
-  color: #FE7634;
-  font-size: 6em;
-  /* text-shadow: 3px 4px black; */
-  -webkit-text-stroke: 3px black;
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .customCol{
+    background-image: linear-gradient(#1E486C 25%, #26A250 90%);
+    min-height: 85vh;
+    border: solid black 10px;
+    border-radius: 1em;
+    box-shadow: 25px 25px 10px #00000090;
+  }
+  
+  h1{
+    font-family: 'Bangers', cursive;
+    font-weight: bolder;
+    color: #f2ac34;
+    font-size: 6em;
+    /* text-shadow: 3px 4px black; */
+    -webkit-text-stroke: 3px black;
+  }
+  
+  h2{
+    font-family: 'Bangers', cursive;
+    font-weight: bolder;
+    color: #FE7634;
+    font-size: 6em;
+    /* text-shadow: 3px 4px black; */
+    -webkit-text-stroke: 3px black;
+  }
+  
+  h6 {
+    font-family: 'Bangers', cursive;
+    font-weight: bolder;
+    color: #f2ac34;
+    font-size: 1.5em;
+    /* text-shadow: 3px 4px black; */
+    -webkit-text-stroke: 1px black;
+    transition: all .2s ease-in-out;
+  }
+  
+  h6:hover{
+    color: #FE7634;
+    transform: scale(1.1);
+    text-decoration: none;
+  }
+  
+  .customLink{
+    font-family: 'Bangers', cursive;
+    font-size: 24px;
+    letter-spacing: 2px;
+    color: #f2ac34;
+    -webkit-text-stroke: 1px black;
+    margin-top: 1%;
+    transition: all .2s ease-in-out;
+  }
+  
+  .customLink:hover{
+    color: #FE7634;
+    transform: scale(1.1);
+  }
+  
+  .navContainer{
+    background-image: linear-gradient(#1E486C 25%, #26A250 90%);
+    border-left: solid black 10px;
+    border-right: solid black 10px;
+    border-bottom: solid black 10px;
+    border-bottom-right-radius: 1em;    
+    border-bottom-left-radius: 1em;  
+    box-shadow: 12px 12px 5px #00000090;
+    min-height: 5vh;
+  }
+  
+  .backgroundContainer{
+    background-image: linear-gradient(#fe7734b4, #f2ac34b4);
+    min-height: 100vh;
+  }
+  
+  .links{
+    text-decoration: none !important;
+  }
 }
 
-h7 {
-  font-family: 'Bangers', cursive;
-  font-weight: bolder;
-  color: #f2ac34;
-  font-size: 1.5em;
-  /* text-shadow: 3px 4px black; */
-  -webkit-text-stroke: 1px black;
-  transition: all .2s ease-in-out;
+
+
+
+
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .customCol{
+    background-image: linear-gradient(#1E486C 25%, #26A250 90%);
+    min-height: 85vh;
+    border: solid black 10px;
+    border-radius: 1em;
+    box-shadow: 25px 25px 10px #00000090;
+  }
+  
+  h1{
+    font-family: 'Bangers', cursive;
+    font-weight: bolder;
+    color: #f2ac34;
+    font-size: 6em;
+    /* text-shadow: 3px 4px black; */
+    -webkit-text-stroke: 3px black;
+  }
+  
+  h2{
+    font-family: 'Bangers', cursive;
+    font-weight: bolder;
+    color: #FE7634;
+    font-size: 6em;
+    /* text-shadow: 3px 4px black; */
+    -webkit-text-stroke: 3px black;
+  }
+  
+  h6 {
+    font-family: 'Bangers', cursive;
+    font-weight: bolder;
+    color: #f2ac34;
+    font-size: 1.5em;
+    /* text-shadow: 3px 4px black; */
+    -webkit-text-stroke: 1px black;
+    transition: all .2s ease-in-out;
+  }
+  
+  h6:hover{
+    color: #FE7634;
+    transform: scale(1.1);
+    text-decoration: none;
+  }
+  
+  .customLink{
+    font-family: 'Bangers', cursive;
+    font-size: 24px;
+    letter-spacing: 2px;
+    color: #f2ac34;
+    -webkit-text-stroke: 1px black;
+    margin-top: 1%;
+    transition: all .2s ease-in-out;
+  }
+  
+  .customLink:hover{
+    color: #FE7634;
+    transform: scale(1.1);
+  }
+  
+  .navContainer{
+    background-image: linear-gradient(#1E486C 25%, #26A250 90%);
+    border-left: solid black 10px;
+    border-right: solid black 10px;
+    border-bottom: solid black 10px;
+    border-bottom-right-radius: 1em;    
+    border-bottom-left-radius: 1em;  
+    box-shadow: 12px 12px 5px #00000090;
+    min-height: 5vh;
+  }
+  
+  .backgroundContainer{
+    background-image: linear-gradient(#fe7734b4, #f2ac34b4);
+    min-height: 100vh;
+  }
+  
+  .links{
+    text-decoration: none !important;
+  }
 }
 
-h7:hover{
-  color: #FE7634;
-  transform: scale(1.1);
-  text-decoration: none;
+
+
+
+
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .customCol{
+    background-image: linear-gradient(#1E486C 25%, #26A250 90%);
+    min-height: 85vh;
+    border: solid black 10px;
+    border-radius: 1em;
+    box-shadow: 25px 25px 10px #00000090;
+  }
+  
+  h1{
+    font-family: 'Bangers', cursive;
+    font-weight: bolder;
+    color: #f2ac34;
+    font-size: 7em;
+    -webkit-text-stroke: 3px black;
+  }
+  
+  h2{
+    font-family: 'Bangers', cursive;
+    font-weight: bolder;
+    color: #FE7634;
+    font-size: 6em;
+    -webkit-text-stroke: 3px black;
+  }
+  
+  h6 {
+    font-family: 'Bangers', cursive;
+    font-weight: bolder;
+    color: #f2ac34;
+    font-size: 1.5em;
+    -webkit-text-stroke: 1px black;
+    transition: all .2s ease-in-out;
+  }
+  
+  h6:hover{
+    color: #FE7634;
+    transform: scale(1.1);
+    text-decoration: none;
+  }
+  
+  .customLink{
+    font-family: 'Bangers', cursive;
+    font-size: 24px;
+    letter-spacing: 2px;
+    color: #f2ac34;
+    -webkit-text-stroke: 1px black;
+    margin-top: 1%;
+    transition: all .2s ease-in-out;
+  }
+  
+  .customLink:hover{
+    color: #FE7634;
+    transform: scale(1.1);
+  }
+  
+  .navContainer{
+    background-image: linear-gradient(#1E486C 25%, #26A250 90%);
+    border-left: solid black 10px;
+    border-right: solid black 10px;
+    border-bottom: solid black 10px;
+    border-bottom-right-radius: 1em;    
+    border-bottom-left-radius: 1em;  
+    box-shadow: 12px 12px 5px #00000090;
+    min-height: 5vh;
+  }
+  
+  .backgroundContainer{
+    background-image: linear-gradient(#fe7734b4, #f2ac34b4);
+    min-height: 100vh;
+  }
+  
+  .links{
+    text-decoration: none !important;
+  }
 }
 
-.customLink{
-  font-family: 'Bangers', cursive;
-  font-size: 24px;
-  letter-spacing: 2px;
-  color: #f2ac34;
-  -webkit-text-stroke: 1px black;
-  margin-top: 1%;
-  transition: all .2s ease-in-out;
-}
-
-.customLink:hover{
-  color: #FE7634;
-  transform: scale(1.1);
-}
-
-.navContainer{
-  background-image: linear-gradient(#1E486C 25%, #26A250 90%);
-  border-left: solid black 10px;
-  border-right: solid black 10px;
-  border-bottom: solid black 10px;
-  border-bottom-right-radius: 1em;    
-  border-bottom-left-radius: 1em;  
-  box-shadow: 12px 12px 5px #00000090;
-  min-height: 5vh;
-}
-
-.backgroundContainer{
-  background-image: linear-gradient(#fe7734b4, #f2ac34b4);
-  min-height: 100vh;
-}
-
-.links{
-  text-decoration: none !important;
-}
