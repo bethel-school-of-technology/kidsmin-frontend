@@ -10,7 +10,7 @@ function AddMember() {
         const data = new FormData(event.target);
         
         fetch('http://localhost:3000/members/', {
-          method: 'POST',
+          method: 'post',
           body: data
         }); 
     }
