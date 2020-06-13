@@ -1,10 +1,11 @@
+import { extendObservable, reaction } from 'mobx'; 
 import React, { Component } from 'react';
 import { Container, Col, Row } from 'react-bootstrap';
 import axios from 'axios';
 
 import './login.css'
 
-class Login extends Component {
+/*class Login extends Component {
     
     constructor(props){
         super(props);
@@ -33,7 +34,10 @@ class Login extends Component {
             localStorage.setItem('cool-jwt', res.data);
             this.props.history.push("/members")
         });
-    }
+    } */
+
+
+
 
     render() {
         return (
@@ -78,6 +82,6 @@ class Login extends Component {
             </Container>
         );
     }
-}
+
   
 export default Login;
