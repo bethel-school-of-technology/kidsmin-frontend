@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Col, Row } from 'react-bootstrap';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
-
 import HomePage from './Components/HomePage/homepage';
 import EditMember from './Components/EditMember/editMember';
 import DeleteMember from './Components/DeleteMember/deleteMember';
@@ -12,18 +11,25 @@ import DeleteConfirmation from './Components/DeleteConfirmation/deleteConfirmati
 // import Login from './Components/Authorization/Login/login';
 
 import './App.css';
+import { unstable_renderSubtreeIntoContainer } from 'react-dom';
 
 
 function App() {
 
 
-    // If not logged in return this code
+  // If not logged in return this code
     // return (
     //     <Login />
     // );
 
     // If logged in return this code
     return (
+
+
+
+
+
+//Routing
     <Router>
     <Container fluid className="backgroundContainer">
         <Row>
