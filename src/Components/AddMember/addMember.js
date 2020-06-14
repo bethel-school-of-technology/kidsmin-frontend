@@ -5,26 +5,20 @@ import './addMember.css';
 
 function AddMember() {
 
-    //const [data] = setState([]); 
-  
- const handleSubmit= (event) => {
-    event.preventDefault();  
-    const data = new FormData(event.target);
-    console.log(data); 
-    fetch('http://localhost:3000/members/',{
-        method: 'POST', 
-        body: data
-    });
-   }
-        
-        // event.preventDefault();
-        // const data = new FormData(event.target);
-        // console.log(data);
-        // fetch('http://localhost:3000/members/', {
-        //   method: 'POST',
-        //   body: data
-        // });
-}
+
+ 
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        const data = new FormData();
+        console.log(data);
+
+        fetch('http://localhost:3000/members/', {
+          method: 'POST',
+          body: data
+        });
+    }
+
 
     return (
         <Container fluid>
@@ -114,6 +108,7 @@ function AddMember() {
         </form>
         </Container>
     );
+};
 
 
 
