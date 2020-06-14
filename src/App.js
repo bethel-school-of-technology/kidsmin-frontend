@@ -9,7 +9,7 @@ import AddMember from './Components/AddMember/addMember';
 import AttendPage from './Components/AttendPage/attendPage';
 import EditMemberDetails from './Components/EditMemberDetails/editMemberDetails';
 import DeleteConfirmation from './Components/DeleteConfirmation/deleteConfirmation';
-// import Login from './Components/Authorization/Login/login';
+//import Login from './Components/Authorization/Login/LoginUser';
 
 import './App.css';
 
