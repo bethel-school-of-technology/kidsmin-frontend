@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, setState} from 'react';
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from 'react-router-dom';
 
@@ -12,6 +12,11 @@ const members = [
 ]
 
 function DeleteMember() {
+    const [searchTerm, setSearchTerm] = useState("");
+    const handleChange = event => {
+        setSearchTerm(event.target.value);
+    };
+
     return (
         <Container fluid>
             <Row>
@@ -24,7 +29,7 @@ function DeleteMember() {
             <Row className="data">
                 <Col xs={1}></Col>
                 <Col xs={10} className="searchBar">
-                    <input type="text" id="searchInput" placeholder="Search Child's Name"></input>
+                    <input type="text" name="searchBar" input={searchTerm} onChange={handleChange} id="searchInput" placeholder="Search Child's Name"></input>
                 </Col>
                 <Col xs={1}></Col>
             </Row>
@@ -37,7 +42,7 @@ function DeleteMember() {
             </Row>
             <Row className="mb-3">
                 <Col sm={12} className="text-center">
-                    {members.map(member => {
+                    {members.filter(filteredMember => filteredMember.firstName.includes(searchTerm) || filteredMember.lastName.includes(searchTerm)).map(member => {
                         return(
                             <Row key={member.idmembers} className="namePlate mt-5">
                                 <Col xs={8} sm={9} md={9} className="text-center mt-3">

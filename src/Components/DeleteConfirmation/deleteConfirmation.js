@@ -7,18 +7,9 @@ import { Redirect } from 'react-router-dom';
 
 // Will need to get the idmembers from param and then get that user from database to confirm name before deletion
 // const memberid = this.props.match.params.idmembers
-// const member =
-//     fetch('/api/form-submit-url', {
-//         method: 'GET', 
-//         body: memberid
-//   });
 const name = {fname: "steve", lname: "dot"};
 
-function DeleteConfirmation() {
-    // const handleSubmit = (event) => {
-    //     event.preventDefault();
-    //     const data = new FormData(event.target);
-        
+function DeleteConfirmation() {       
     //     if (member.firstName + member.lastName === data.firstName + data.lastName) {
     //         fetch('/api/form-submit-url', {
     //             method: 'DELETE',

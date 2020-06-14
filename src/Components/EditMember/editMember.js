@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, setState} from 'react';
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from 'react-router-dom';
 
@@ -6,12 +6,28 @@ import './editMember.css';
 
 const members = [
     {idmembers: "1", firstName: "Steve", lastName: "Dot", guardianNameFirst: "Mr.", guardianNameLast: "Parent", guardianPhone: "123-456-7890", membersAge: "7"},
-    {idmembers: "2", firstName: "Ashley", lastName: "Rose", guardianNameFirst: "Mr.", guardianNameLast: "Parent", guardianPhone: "123-456-7890", membersAge: "10"},
+    {idmembers: "2", firstName: "Jane", lastName: "Doe", guardianNameFirst: "Mr.", guardianNameLast: "Parent", guardianPhone: "123-456-7890", membersAge: "10"},
     {idmembers: "3", firstName: "John", lastName: "Doe", guardianNameFirst: "Mr.", guardianNameLast: "Parent", guardianPhone: "123-456-7890", membersAge: "4"},
     {idmembers: "4", firstName: "Nate", lastName: "McCollam", guardianNameFirst: "Mr.", guardianNameLast: "Parent", guardianPhone: "123-456-7890", membersAge: "29"}
 ]
 
 function EditMember() {
+    // const [searchTerm, setSearchTerm] = React.useState("");
+    // const [searchResults, setSearchResults] = React.useState([]);
+    // const handleChange = event => {
+    //     setSearchTerm(event.target.value);
+    // };
+
+    // React.useEffect(() => {
+    //     const results = members.filter(members => members().includes(searchTerm));
+    //     setSearchResults(results);
+    // }, [searchTerm]);
+
+    const [searchTerm, setSearchTerm] = useState("");
+    const handleChange = event => {
+        setSearchTerm(event.target.value);
+    };
+
     return (
         <Container fluid>
             <Row>
@@ -24,7 +40,7 @@ function EditMember() {
             <Row className="data">
                 <Col xs={1}></Col>
                 <Col xs={10} className="searchBar">
-                    <input type="text" id="searchInput" placeholder="Search Child's Name"></input>
+                    <input type="text" value={searchTerm} onChange={handleChange} name="searchBar" id="searchInput" placeholder="Search Child's Name"></input>
                 </Col>
                 <Col xs={1}></Col>
             </Row>
@@ -37,7 +53,7 @@ function EditMember() {
             </Row>
             <Row className="mb-3">
                 <Col sm={12} className="text-center">
-                    {members.map(member => {
+                    {members.filter(filteredMember => filteredMember.firstName.includes(searchTerm) || filteredMember.lastName.includes(searchTerm)).map(member => {
                         return(
                             <Row key={member.idmembers} className="namePlate mt-5">
                                 <Col xs={8} sm={9} md={9} className="text-center mt-3">

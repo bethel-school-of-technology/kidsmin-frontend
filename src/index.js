@@ -9,18 +9,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // import Login from './Components/Authorization/Login/login';
 import App from './App'
 import * as serviceWorker from './serviceWorker';
+import Login from './Components/Authorization/Login/login';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
-    {/* <Router>
-      <Switch>
-        <Route default exact path="/login" component={Login} />
-        <AuthenticatedComponent>
-          <Route exact path="/home" component={App} />
-        </AuthenticatedComponent>
-      </Switch>
-    </Router> */}
+    <Login />
+    {/* <App /> */}
   </React.StrictMode>,
   document.getElementById('root')
 );

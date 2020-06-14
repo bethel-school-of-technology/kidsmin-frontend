@@ -1,23 +1,9 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { Container, Row, Col } from "react-bootstrap";
 
 import './addMember.css';
 
 function AddMember() {
-
- 
-
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        const data = new FormData();
-        console.log(data);
-
-        fetch('http://localhost:3000/members/', {
-          method: 'POST',
-          body: data
-        });
-    }
-
     return (
         <Container fluid>
             <Row className="mb-5">
@@ -27,7 +13,7 @@ function AddMember() {
                 </Col>
                 <Col xs={2}></Col>
             </Row>
-        <form onSubmit={handleSubmit}>
+        <form id="createForm" name="createForm">
             <Row className="mt-5 text-center">
                 <Col xs={12} className="form-group text-center">
                     <Row className="text-center">
@@ -107,6 +93,5 @@ function AddMember() {
         </Container>
     );
 };
-
 
 export default AddMember;
