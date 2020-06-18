@@ -15,16 +15,17 @@ import './App.css';
 
 
 
-function App() {
+class App extends React.Component {
+    render() {
 
-
+return (
 // function verifyLogin() { 
 
 
-    fetch("http://localhost:3000/users/profile").then(
-        res => {
-            if(res.user) {
-                return (
+    // fetch("http://localhost:3000/users/profile").then(
+    //     res => {
+    //         if(res.user) {
+    //             return (
 
 
 
@@ -70,19 +71,20 @@ function App() {
                             </Row>
                         </Container>
                         </Router>
-                        );
-                    
+                       // );
+  
             
-            }
-            else {
-                return(
-                    <Login /> 
-                );
-            }
-        }
-    );
-//}
-
+         //   }
+//             else {
+//                 return(
+//                     <Login /> 
+//                 );
+//             }
+//         }
+//     );
+// //}
+)
+}
 }
   
   export default App;
