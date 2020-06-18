@@ -1,45 +1,54 @@
-import { extendObservable, reaction } from 'mobx'; 
-import React, { Component } from 'react';
+ 
+import React, {useState } from 'react';
 import { Container, Col, Row } from 'react-bootstrap';
-import axios from 'axios';
+import App  from "../../../App"; 
 
 import './login.css'
 
-/*class Login extends Component {
-    
-    constructor(props){
-        super(props);
-
-        this.state = {
-            username: "",
-            password: ""
-        };
-
-        this.change = this.change.bind(this);
-        this.submit = this.change.bind(this);
-    }
-
-    change(e) {
-        this.setState({
-            [e.target.name]: e.target.value
-        })
-    }
-
-    submit(e) {
-        e.preventDefault();
-        axios.post('/getToken', {
-            email: this.state.email,
-            password: this.state.password
-        }).then(res => {
-            localStorage.setItem('cool-jwt', res.data);
-            this.props.history.push("/members")
-        });
-    } */
 
 
 
+     function Login() {
 
-    render() {
+        const [Username, setUsername] = useState("");
+        const [Password, setPassword] = useState("");
+
+        const handleChange = event => {
+            setUsername(event.target.value);
+            console.log(Username);
+        }; 
+        const handleChange2 = event => {
+            setPassword(event.target.value);
+            console.log(Password);
+        }; 
+        const onSubmit = event => {
+            event.preventDefault(); 
+            fetch("http://localhost:3000/users/login", { 
+                 
+                method: "POST", 
+               
+                body: JSON.stringify({ 
+                     Username, 
+                     Password
+                   
+                }), 
+               
+                headers: { 
+                    "Content-type": 'application/json'
+                } 
+            })
+            
+        }
+        
+        const Logout = event => {
+            event.preventDefault(); 
+            fetch("http://localhost:3000/users/logout", { 
+                 
+                method: "GET", 
+               
+            }) 
+        }
+
         return (
             <Container fluid className="backgroundContainer">
                 <Row>
@@ -56,14 +65,14 @@ import './login.css'
                         <Row className="mt-4">
                             <Col sm={2} className=""></Col>
                             <Col sm={8} className="text-center">
-                                <input type="text" name="username" placeholder="Username" className="my-2 inputData text-center" onChange={e => this.change(e)} value={this.state.username} />
+                                <input type="text" name="username" placeholder="Username" className="my-2 inputData text-center" onChange={handleChange} value={Username} />
                             </Col>
                             <Col sm={2}></Col>
                         </Row>
                         <Row>
                             <Col sm={2} className=""></Col>
                             <Col sm={8} className="text-center">
-                                <input type="password" name="password" placeholder="Password" className="my-2 inputData text-center" onChange={e => this.change(e)} value={this.state.password} />
+                                <input type="password" name="password" placeholder="Password" className="my-2 inputData text-center" onChange={handleChange2} value={Password} />
                             </Col>
                             <Col sm={2}></Col>
                         </Row>
@@ -71,7 +80,8 @@ import './login.css'
                         <Row className="mt-5">
                             <Col sm={4} className=""></Col>
                             <Col sm={4} className="my-2 text-center">
-                                <button type="submit" className="loginBtn">Login</button>
+                                <button type="submit" className="loginBtn" onClick = {onSubmit} >Login</button>
+                                <button type="submit" className="loginBtn" onClick = {Logout} >Logout</button>
                             </Col>
                             <Col sm={4}></Col>
                         </Row>  
