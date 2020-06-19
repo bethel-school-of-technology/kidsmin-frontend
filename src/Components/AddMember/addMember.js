@@ -38,6 +38,7 @@ function AddMember () {
     };
     const onSubmit = event => {
         event.preventDefault();
+
         fetch("http://localhost:3000/members", {
 
             method: "POST",
@@ -53,9 +54,15 @@ function AddMember () {
             headers: {
                 "Content-type":'application/json'
             }
-        })
+        }).then(res => {
+            console.log(res);
+            if (res.status === 200) {
+                alert("Member Added");
+                
+                
+            }
+        }); 
     }
-
 
     return (
         <Container fluid>

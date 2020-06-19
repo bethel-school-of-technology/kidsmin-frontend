@@ -1,14 +1,15 @@
 import React, {useState } from 'react';
 import { Container, Col, Row } from 'react-bootstrap';
 import App  from "../../../App"; 
-
+import {useHistory} from "react-router-dom";
 import './login.css'
+import HomePage from '../../HomePage/homepage';
 
 
 
 
      function Login() {
-
+let history = useHistory(); 
         const [Username, setUsername] = useState("");
         const [Password, setPassword] = useState("");
 
@@ -35,6 +36,20 @@ import './login.css'
                 headers: { 
                     "Content-type": 'application/json'
                 } 
+            }).then(res => {
+                console.log(res);
+                if (res.status === 200) {
+                    alert("Logged In");
+                    history.push("/members")
+                    
+                }
+                else {
+                    console.log(res);
+                    if (res.ok === false) {
+                    alert("Incorrect Login"); 
+                    }
+                   // history.push("/login")
+                }
             })
             
         }
@@ -45,7 +60,12 @@ import './login.css'
                  
                 method: "GET", 
                
-            }) 
+            }).then(res => {
+                console.log(res); 
+                if(res.status === 200) {
+                    alert ("Logged Out");
+                }
+            })
         }
 
         return (

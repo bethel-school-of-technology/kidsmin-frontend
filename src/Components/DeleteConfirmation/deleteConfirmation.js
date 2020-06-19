@@ -1,20 +1,62 @@
-import React, {useState, useEffect} from 'react';
+
+import React, {useState} from 'react';
+
 import { Container, Row, Col } from "react-bootstrap";
+import '../AddMember/addMember.css';
+import {useParams} from "react-router-dom"; 
 
 import '../AddMember/addMember.css'
-//import { Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
+
+
 
 
 
 function DeleteConfirmation() {
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
+    
 
-    const [member, setMembers] = useState([])
+    const handleFirst = event => {
+        setFirstName(event.target.value);
+        console.log(firstName);
+    };
+    const handleLast = event => {
+        setLastName(event.target.value);
+        console.log(lastName);
+    };
+   
+    let params = useParams();  
+    const onSubmitDelete= event => {
+        
+        event.preventDefault();
+        fetch("http://localhost:3000/members/" + params.idmembers, {
 
-    useEffect(() => {
-        fetch('http://localhost:3000/members')
-        .then(data => data.json())
-        .then(members => setMembers(members))
-    }, [])
+            method: "DELETE",
+
+            body: JSON.stringify({
+                firstName,
+                lastName
+                
+
+
+
+
+            }),
+
+            headers: {
+                "Content-type": 'application/json'
+            }
+        }).then(res => {
+            console.log(res); 
+            if (res.status === 200) {
+                alert("Member Deleted"); 
+            }
+        })
+
+    }
+
+
 
 
     return (
@@ -22,7 +64,9 @@ function DeleteConfirmation() {
             <Row className="mt-3 mb-5">
                 <Col sm={1}></Col>
                 <Col sm={10} className="text-center">
-                    <h1>Delete {member.firstName + " " + member.lastName}</h1>
+
+                    <h1>Delete {firstName + " " + lastName}</h1>
+
                 </Col>
                 <Col sm={1}></Col>
             </Row>
@@ -45,10 +89,12 @@ function DeleteConfirmation() {
                         </Col>
                         <Col sm={2}></Col>
                         <Col sm={6} className="text-right">
-                            <input type="text" placeholder={member.firstName} name="firstName" className="my-2 inputData text-center" />
+
+                            <input type="text" placeholder={firstName} name="firstName" className="my-2 inputData text-center" onChange={handleFirst} value={firstName} />
                         </Col>
                         <Col sm={6} className="text-left">
-                            <input type="text" placeholder={member.lastName} name="lastName" className="my-2 inputData text-center" />
+                            <input type="text" placeholder={lastName} name="lastName" className="my-2 inputData text-center" onChange={handleLast} value={lastName} />
+
                         </Col>
                     </Row>
                 </Col>
@@ -57,7 +103,7 @@ function DeleteConfirmation() {
             <Row className="mt-5">
                 <Col sm={4} className=""></Col>
                 <Col sm={4} className="my-2 text-center">
-                    <button type="submit" className=" formSubmitBtn">DELETE</button>
+                    <button type="submit" className=" formSubmitBtn" onClick={onSubmitDelete}>DELETE</button>
                 </Col>
                 <Col sm={4}></Col>
             </Row>
