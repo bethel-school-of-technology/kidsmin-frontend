@@ -4,9 +4,10 @@ import { Container, Row, Col } from "react-bootstrap";
 import './homepage.css';
 
 
-function HomePage( props ) {
+function HomePage() {
 
     const [members, setMembers] = useState([])
+    const [count, setCount] = useState([])
 
     useEffect(() => {
         fetch('http://localhost:3000/members')
@@ -14,13 +15,24 @@ function HomePage( props ) {
         .then(members => setMembers(members))
     }, [])
 
+    useEffect(() => {
+        fetch('http://localhost:3000/member/count')
+        .then(data => data.json())
+        .then(members => {
+            let c = members.length;
+            setCount(data.count)
+    });
+    
+
+
+
     return (
         <Container fluid>
             <Row>
                 <Col sm={1}></Col>
                 <Col xs={4} sm={4} className="text-center">
                     <div className="customShape ml-3 layer1">
-                        <h2 className="layer2">4</h2>
+                        <h2 className="layer2">{count}</h2>
                     </div>
                 </Col>
                 <Col xs={6} sm={6} className="text-left customHeader">
