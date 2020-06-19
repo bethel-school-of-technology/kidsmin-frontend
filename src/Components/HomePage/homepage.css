@@ -1,91 +1,539 @@
-.customShape{
-    background-image: url('../../img/pow-hi.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 250px;
-    width: 100%;
-    position: absolute;
-    text-align: center;
-    display: table;
-}
-
-.layer1{
-    position: absolute;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.layer2{
-    position: absolute;
-    z-index: 2;
-    align-self: center;
-    justify-self: center;
-    justify-content: center;
-    max-height: 1em;
-}
-
-h2{
-    position: inline-block;
-    display: table-cell;
-    vertical-align: middle;
-}
-
-.customHeader{
-    margin-top: 4em;
-}
-
-.data{
-    background: white;
-    border: black solid 0.20em;
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-    font-family: 'Bangers', cursive;
-    font-weight: bolder;
-    color: #f2ac34;
-    font-size: 3em;
-    /* text-shadow: 3px 4px black; */
-    -webkit-text-stroke: 3px black;
-    border-radius: 0.5em;
-    height: 2em;
-}
-
-.checkbox{
-    width: 50px;
-    height: 50px;
-    background-color: #FE7634;
-    border: black solid 10px;
-    display: inline-block;
-}
-
-.customButton1{
-    background-color: #FE7634;
-    border: black solid 10px;
-    border-radius: 1em;
-    /* width: 100%; */
-    height: 1em;
-    display: table;
-    transition: all .2s ease-in-out;
-    vertical-align: center;
-    justify-content: center;
-}
-
-.customButton1:hover{
-    transform: scale(1.1);
-    background-color: #f2ac34;
-}
-
-.update{
-    font-size: 3em;
-    display: table-cell;
-    position: inline-block;
-    transition: all .2s ease-in-out;
-}
-
-.update:hover{
-    color: #FE7634;
-}
+/* // Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    /* homepage extra-small */
+    h4{
+      font-size: 3em;
+      max-width: 100%;
+      -webkit-text-stroke: 2px black;
+      font-family: 'Bangers', cursive;
+      font-weight: bolder;
+      color: #f2ac34;
+    }
+  
+    .customShape{
+      background-image: url('../../img/pow-hi.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 200px;
+      width: 100%;
+      position: absolute;
+      text-align: center;
+      display: table;
+    }
+    
+    .layer1{
+      position: absolute;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    
+    .layer2{
+      position: absolute;
+      z-index: 2;
+      align-self: center;
+      justify-self: center;
+      justify-content: center;
+      max-height: 1em;
+    }
+    
+    h2{
+      position: inline-block;
+      display: table-cell;
+      vertical-align: middle;
+    }
+    
+    .customHeader{
+      margin-top: 4em;
+    }
+    
+    .data{
+      background: white;
+      border: black solid 0.20em;
+      width: 80%;
+      margin-left: 10%;
+      margin-right: 10%;
+      font-family: 'Bangers', cursive;
+      font-weight: bolder;
+      color: #f2ac34;
+      font-size: 3em;
+      /* text-shadow: 3px 4px black; */
+      -webkit-text-stroke: 3px black;
+      border-radius: 0.5em;
+      height: 2em;
+    }
+    
+    .checkbox{
+      width: 50px;
+      height: 50px;
+      background-color: #FE7634;
+      border: black solid 10px;
+      display: inline-block;
+    }
+    
+    .customButton1{
+      background-color: #FE7634;
+      border: black solid 10px;
+      border-radius: 1em;
+      /* width: 100%; */
+      height: 1em;
+      display: table;
+      transition: all .2s ease-in-out;
+      vertical-align: center;
+      justify-content: center;
+    }
+    
+    .customButton1:hover{
+      transform: scale(1.1);
+      background-color: #f2ac34;
+    }
+    
+    .update{
+      font-size: 3em;
+      display: table-cell;
+      position: inline-block;
+      transition: all .2s ease-in-out;
+    }
+    
+    .update:hover{
+      color: #FE7634;
+    }
+  }
+  
+  
+  
+  
+  
+  /* // Small devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) and (max-width: 767.98px) {
+  
+  h4{
+      font-size: 2.75em;
+      max-width: 100%;
+      -webkit-text-stroke: 2px black;
+      font-family: 'Bangers', cursive;
+      font-weight: bolder;
+      color: #f2ac34;
+  }
+  
+  .customShape{
+      background-image: url('../../img/pow-hi.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 250px;
+      width: 100%;
+      position: absolute;
+      text-align: center;
+      display: table;
+  }
+  
+  .layer1{
+      position: absolute;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+  }
+  
+  .layer2{
+      position: absolute;
+      z-index: 2;
+      align-self: center;
+      justify-self: center;
+      justify-content: center;
+      max-height: 1em;
+  }
+  
+  h2{
+      position: inline-block;
+      display: table-cell;
+      vertical-align: middle;
+  }
+  
+  .customHeader{
+      margin-top: 4em;
+      margin-left: 1em;
+  }
+  
+  .data{
+      background: white;
+      border: black solid 0.20em;
+      width: 80%;
+      margin-left: 10%;
+      margin-right: 10%;
+      font-family: 'Bangers', cursive;
+      font-weight: bolder;
+      color: #f2ac34;
+      font-size: 3em;
+      /* text-shadow: 3px 4px black; */
+      -webkit-text-stroke: 3px black;
+      border-radius: 0.5em;
+      height: 2em;
+  }
+  
+  .checkbox{
+      width: 50px;
+      height: 50px;
+      background-color: #FE7634;
+      border: black solid 10px;
+      display: inline-block;
+  }
+  
+  .customButton1{
+      background-color: #FE7634;
+      border: black solid 10px;
+      border-radius: 1em;
+      /* width: 100%; */
+      height: 1em;
+      display: table;
+      transition: all .2s ease-in-out;
+      vertical-align: center;
+      justify-content: center;
+  }
+  
+  .customButton1:hover{
+      transform: scale(1.1);
+      background-color: #f2ac34;
+  }
+  
+  .update{
+      font-size: 2.75em;
+      display: table-cell;
+      position: inline-block;
+      transition: all .2s ease-in-out;
+  }
+  
+  .update:hover{
+      color: #FE7634;
+  }
+  }
+  
+  
+  
+  
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) and (max-width: 991.98px) {
+      h4{
+          font-size: 3.5em;
+          max-width: 100%;
+          -webkit-text-stroke: 2px black;
+          font-family: 'Bangers', cursive;
+          font-weight: bolder;
+          color: #f2ac34;
+      }
+      
+      .customShape{
+          background-image: url('../../img/pow-hi.png');
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          height: 250px;
+          width: 100%;
+          position: absolute;
+          text-align: center;
+          display: table;
+      }
+      
+      .layer1{
+          position: absolute;
+          z-index: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+      }
+      
+      .layer2{
+          position: absolute;
+          z-index: 2;
+          align-self: center;
+          justify-self: center;
+          justify-content: center;
+          max-height: 1em;
+      }
+      
+      h2{
+          position: inline-block;
+          display: table-cell;
+          vertical-align: middle;
+      }
+      
+      .customHeader{
+          margin-top: 4em;
+          margin-left: 3em;
+      }
+      
+      .data{
+          background: white;
+          border: black solid 0.20em;
+          width: 80%;
+          margin-left: 10%;
+          margin-right: 10%;
+          font-family: 'Bangers', cursive;
+          font-weight: bolder;
+          color: #f2ac34;
+          font-size: 3em;
+          /* text-shadow: 3px 4px black; */
+          -webkit-text-stroke: 3px black;
+          border-radius: 0.5em;
+          height: 2em;
+      }
+      
+      .checkbox{
+          width: 50px;
+          height: 50px;
+          background-color: #FE7634;
+          border: black solid 10px;
+          display: inline-block;
+      }
+  
+      .customButton1{
+          background-color: #FE7634;
+          border: black solid 10px;
+          border-radius: 1em;
+          /* width: 100%; */
+          height: 1em;
+          display: table;
+          transition: all .2s ease-in-out;
+          vertical-align: center;
+          justify-content: center;
+      }
+      
+      .customButton1:hover{
+          transform: scale(1.1);
+          background-color: #f2ac34;
+      }
+      
+      .update{
+          font-size: 3.5em;
+          display: table-cell;
+          position: inline-block;
+          transition: all .2s ease-in-out;
+      }
+      
+      .update:hover{
+          color: #FE7634;
+      }
+  }
+  
+  
+  
+  
+  
+  
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+      h4{
+          font-size: 4.20em;
+          max-width: 100%;
+          -webkit-text-stroke: 2px black;
+          font-family: 'Bangers', cursive;
+          font-weight: bolder;
+          color: #f2ac34;
+      }
+      
+      .customShape{
+          background-image: url('../../img/pow-hi.png');
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          height: 250px;
+          width: 100%;
+          position: absolute;
+          text-align: center;
+          display: table;
+      }
+      
+      .layer1{
+          position: absolute;
+          z-index: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+      }
+      
+      .layer2{
+          position: absolute;
+          z-index: 2;
+          align-self: center;
+          justify-self: center;
+          justify-content: center;
+          max-height: 1em;
+      }
+      
+      h2{
+          position: inline-block;
+          display: table-cell;
+          vertical-align: middle;
+      }
+      
+      .customHeader{
+          margin-top: 4em;
+          margin-left: 3em;
+      }
+      
+      .data{
+          background: white;
+          border: black solid 0.20em;
+          width: 80%;
+          margin-left: 10%;
+          margin-right: 10%;
+          font-family: 'Bangers', cursive;
+          font-weight: bolder;
+          color: #f2ac34;
+          font-size: 3em;
+          /* text-shadow: 3px 4px black; */
+          -webkit-text-stroke: 3px black;
+          border-radius: 0.5em;
+          height: 2em;
+      }
+      
+      .checkbox{
+          width: 50px;
+          height: 50px;
+          background-color: #FE7634;
+          border: black solid 10px;
+          display: inline-block;
+      }
+  
+      .customButton1{
+          background-color: #FE7634;
+          border: black solid 10px;
+          border-radius: 1em;
+          /* width: 100%; */
+          height: 1em;
+          display: table;
+          transition: all .2s ease-in-out;
+          vertical-align: center;
+          justify-content: center;
+      }
+      
+      .customButton1:hover{
+          transform: scale(1.1);
+          background-color: #f2ac34;
+      }
+      
+      .update{
+          font-size: 4em;
+          display: table-cell;
+          position: inline-block;
+          transition: all .2s ease-in-out;
+      }
+      
+      .update:hover{
+          color: #FE7634;
+      }
+  } 
+  
+  
+  
+  /* extra large screens */
+  @media (min-width: 1200px) {
+      h4{
+          font-size: 4.20em;
+          max-width: 100%;
+          -webkit-text-stroke: 3px black;
+          font-family: 'Bangers', cursive;
+          font-weight: bolder;
+          color: #f2ac34;
+      }
+      
+      .customShape{
+          background-image: url('../../img/pow-hi.png');
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          height: 250px;
+          width: 100%;
+          position: absolute;
+          text-align: center;
+          display: table;
+      }
+      
+      .layer1{
+          position: absolute;
+          z-index: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+      }
+      
+      .layer2{
+          position: absolute;
+          z-index: 2;
+          align-self: center;
+          justify-self: center;
+          justify-content: center;
+          max-height: 1em;
+      }
+      
+      h2{
+          position: inline-block;
+          display: table-cell;
+          vertical-align: middle;
+      }
+      
+      .customHeader{
+          margin-top: 4em;
+          margin-left: 6em;
+      }
+      
+      .data{
+          background: white;
+          border: black solid 0.20em;
+          width: 80%;
+          margin-left: 10%;
+          margin-right: 10%;
+          font-family: 'Bangers', cursive;
+          font-weight: bolder;
+          color: #f2ac34;
+          font-size: 3em;
+          /* text-shadow: 3px 4px black; */
+          -webkit-text-stroke: 3px black;
+          border-radius: 0.5em;
+          height: 2em;
+      }
+      
+      .checkbox{
+          width: 50px;
+          height: 50px;
+          background-color: #FE7634;
+          border: black solid 10px;
+          display: inline-block;
+      }
+  
+      .customButton1{
+          background-color: #FE7634;
+          border: black solid 10px;
+          border-radius: 1em;
+          /* width: 100%; */
+          height: 1em;
+          display: table;
+          transition: all .2s ease-in-out;
+          vertical-align: center;
+          justify-content: center;
+      }
+      
+      .customButton1:hover{
+          transform: scale(1.1);
+          background-color: #f2ac34;
+      }
+      
+      .update{
+          font-size: 4em;
+          display: table-cell;
+          position: inline-block;
+          transition: all .2s ease-in-out;
+      }
+      
+      .update:hover{
+          color: #FE7634;
+      }
+  }

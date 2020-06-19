@@ -60,22 +60,22 @@ function AddMember () {
     return (
         <Container fluid>
             <Row className="mb-5">
-                <Col sm={2}></Col>
-                <Col sm={8} className="text-center customHeader">
-                    <h1 className="">New Member</h1>
+                <Col xs={2}></Col>
+                <Col xs={8} className="text-center mt-4">
+                    <h1 className="smallerFont">New Member</h1>
                 </Col>
-                <Col sm={2}></Col>
+                <Col xs={2}></Col>
             </Row>
         <form onSubmit={e => this.submit(e)}>
             <Row className="mt-5 text-center">
-                <Col sm={12} className="form-group text-center">
+                <Col xs={12} className="form-group text-center">
                     <Row className="text-center">
-                        <Col sm={2} className=""></Col>
-                        <Col sm={8} className="text-center">
+                        <Col xs={2} className=""></Col>
+                        <Col xs={8} className="text-center">
                             <h3 className="dividerTitle text-center">Child's Info</h3>
                         </Col>
-                        <Col sm={2}></Col>
-                        <Col sm={6} className="text-right">
+                        <Col xl={2}></Col>
+                        <Col xs={12} xl={6} className="textR">
                             <input 
                                 value={firstName}
                                 onChange={handleFirstName}
@@ -85,7 +85,7 @@ function AddMember () {
                                 required 
                                 className="my-2 inputData text-center" />
                         </Col>
-                        <Col sm={6} className="text-left">
+                        <Col xs={12} xl={6} className="textL">
                             <input 
                                 value={lastName}
                                 onChange={handleLastName}
@@ -97,8 +97,8 @@ function AddMember () {
                         </Col>
                     </Row>
                     <Row>
-                        <Col sm={2} className=""></Col>
-                        <Col sm={8} className="text-center">
+                        <Col xl={2} className=""></Col>
+                        <Col xs={12} xl={8} className="textC">
                             <input  
                                 value={membersAge}
                                 onChange={handleMembersAge}
@@ -108,16 +108,16 @@ function AddMember () {
                                 required  
                                 className="inputData text-center my-2" />
                         </Col>
-                        <Col sm={2}></Col>
+                        <Col xl={2}></Col>
                     </Row>
                     <br></br>
                     <Row>
-                        <Col sm={2} className=""></Col>
-                        <Col sm={8} className="text-center">
+                        <Col xs={2} className=""></Col>
+                        <Col xs={8} className="text-center">
                             <h3 className="dividerTitle">Guardian's Info</h3>
                         </Col>
-                        <Col sm={2}></Col>
-                        <Col sm={6} className="text-right">
+                        <Col xs={2}></Col>
+                        <Col xs={12} xl={6} className="textR">
                             <input  
                                 value={guardianNameFirst}
                                 onChange={handleGuardianNameFirst} 
@@ -127,7 +127,7 @@ function AddMember () {
                                 required 
                                 className="my-2 inputData text-center" />
                         </Col>
-                        <Col sm={6} className="text-left">
+                        <Col xs={12} xl={6} className="textL">
                             <input 
                                 value={guardianLastName}
                                 onChange={handleGuardianLastName} 
@@ -139,8 +139,8 @@ function AddMember () {
                         </Col>
                     </Row>
                     <Row>
-                        <Col sm={2} className=""></Col>
-                        <Col sm={8} className="text-center">
+                        <Col xl={2} className=""></Col>
+                        <Col xs={12} xl={8} className="textC">
                             <input  
                                 value={guardianPhone}
                                 onChange={handleGuardianPhone} 
@@ -150,37 +150,15 @@ function AddMember () {
                                 required 
                                 className="my-2 inputData text-center" />
                         </Col>
-                        <Col sm={2}></Col>
+                        <Col xl={2}></Col>
                     </Row>
-                    {/* This commented out section is if we add a second guardian. */}
-                    {/* <br></br>
-                    <Row>
-                        <Col sm={2} className=""></Col>
-                        <Col sm={8} className="text-center">
-                            <h3 className="dividerTitle">Guardian's Info</h3>
-                        </Col>
-                        <Col sm={2}></Col>
-                        <Col sm={6} className="text-right">
-                            <input type="text" placeholder="Guardian's First Name" className="my-2 inputData text-center" />
-                        </Col>
-                        <Col sm={6} className="text-left">
-                            <input type="text" placeholder="Guardian's Last Name" className="my-2 inputData text-center" />
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col sm={2} className=""></Col>
-                        <Col sm={8} className="text-center">
-                            <input type="phone" placeholder="Guardian's Phone" className="my-2 inputData text-center" />
-                        </Col>
-                        <Col sm={2}></Col>
-                    </Row> */}
                     <br></br>
                     <Row className="mt-5">
-                        <Col sm={4} className=""></Col>
-                        <Col sm={4} className="my-2 text-center">
-                            <button type="submit" className="formSubmitBtn" onClick = {onSubmit}>SUBMIT</button>
+                        <Col sm={3} className=""></Col>
+                        <Col sm={6} className="my-2 text-center">
+                            <button type="submit" className="formSubmitBtn" onClick={onSubmit}>SUBMIT</button>
                         </Col>
-                        <Col sm={4}></Col>
+                        <Col sm={3}></Col>
                     </Row>
                 </Col>
             </Row>
