@@ -75,7 +75,7 @@ function EditMemberDetails() {
             <Row className="mb-5">
                 <Col xl={2}></Col>
                 <Col xs={12} xl={8} className="text-center customHeader">
-                    <h1 className="">Edit {members.firstName}'s Info</h1>
+                    <h1 className="">Edit {firstName}'s Info</h1>
                 </Col>
                 <Col xl={2}></Col>
             </Row>
