@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 // import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import App from './App'
+ import App from './App'
 import * as serviceWorker from './serviceWorker';
-
+//import Login from "./Components/Authorization/Login/login";
 
 ReactDOM.render(
   <React.StrictMode>
