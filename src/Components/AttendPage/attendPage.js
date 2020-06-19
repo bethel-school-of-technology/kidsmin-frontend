@@ -1,17 +1,18 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { Container, Row, Col } from "react-bootstrap";
 
 import './attendPage.css';
 
 
-const members = [
-    {id: "1", fName: "Steve", lName: "Dot", attend: true},
-    {id: "2", fName: "Ashley", lName: "Rose", attend: false},
-    {id: "3", fName: "John", lName: "Doe", attend: false},
-    {id: "4", fName: "Nate", lName: "McCollam", attend: true}
-]
-
 function AttendPage() {
+
+    const [members, setMembers] = useState([])
+
+    useEffect(() => {
+        fetch('http://localhost:3000/members')
+        .then(data => data.json())
+        .then(members => setMembers(members))
+    }, [])
 
     return (
         <Container fluid>
@@ -39,11 +40,11 @@ function AttendPage() {
             <Row className="mt-5">
                 {/* Attendance Col */}
                 <Col sm={6}>
-                    {members.filter(member => member.attend === true).map(attending => {
+                    {members.filter(member => member.attendance === true).map(attending => {
                         return(
-                            <Row key={attending.id} className="namePlate mt-5 mb-3">
+                            <Row key={attending.idmembers} className="namePlate mt-5 mb-3">
                                 <Col sm={12} className="text-center mt-3">
-                                    <h4>{attending.fName + " " + attending.lName}</h4>
+                                    <h4>{attending.firstName + " " + attending.lastName}</h4>
                                 </Col>
                             </Row>
                         );
@@ -52,11 +53,11 @@ function AttendPage() {
 
                 {/* Absent Col */}
                 <Col sm={6}>
-                    {members.filter(member => member.attend === false).map(absent => {
+                    {members.filter(member => member.attendance === false).map(absent => {
                         return(
-                            <Row key={absent.id} className="namePlate mt-5 mb-3">
+                            <Row key={absent.idmembers} className="namePlate mt-5 mb-3">
                                 <Col sm={12} className="text-center mt-3">
-                                    <h4>{absent.fName + " " + absent.lName}</h4>
+                                    <h4>{absent.firstName + " " + absent.lastName}</h4>
                                 </Col>
                             </Row>
                         );
