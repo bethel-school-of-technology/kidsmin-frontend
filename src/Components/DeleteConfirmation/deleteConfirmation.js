@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import { Container, Row, Col } from "react-bootstrap";
 
 import '../AddMember/addMember.css'
-import { Redirect } from 'react-router-dom';
+//import { Redirect } from 'react-router-dom';
 
 
 
