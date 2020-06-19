@@ -11,7 +11,12 @@ const members = [
 ]
 
 
-const EditMemberDetails = () => {
+function EditMemberDetails(params) {
+    // get member by id
+    // fetch('https://localhost:3000/member')
+
+// members = response
+
     return (
         <Container fluid>
             <Row className="mb-5">

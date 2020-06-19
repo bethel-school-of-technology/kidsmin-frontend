@@ -9,7 +9,7 @@ import { Redirect } from 'react-router-dom';
 // const memberid = this.props.match.params.idmembers
 const name = {fname: "steve", lname: "dot"};
 
-function DeleteConfirmation() {       
+function DeleteConfirmation(props) {       
     //     if (member.firstName + member.lastName === data.firstName + data.lastName) {
     //         fetch('/api/form-submit-url', {
     //             method: 'DELETE',

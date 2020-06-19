@@ -17,6 +17,16 @@ function DeleteMember() {
         setSearchTerm(event.target.value);
     };
 
+    const upperCase = searchTerm.charAt(0).toUpperCase() + searchTerm.slice(1);
+
+    // handleDelete(id) {
+    //     fetch('httpsL//localhost:3000/members/delete', {
+    //         method: "DELETE"
+
+    //         body: id
+    //     })
+    // }
+
     return (
         <Container fluid>
             <Row>
@@ -42,7 +52,7 @@ function DeleteMember() {
             </Row>
             <Row className="mb-3">
                 <Col sm={12} className="text-center">
-                    {members.filter(filteredMember => filteredMember.firstName.includes(searchTerm) || filteredMember.lastName.includes(searchTerm)).map(member => {
+                    {members.filter(filteredMember => filteredMember.firstName.includes(upperCase) || filteredMember.lastName.includes(upperCase)).map(member => {
                         return(
                             <Row key={member.idmembers} className="namePlate mt-5">
                                 <Col xs={8} sm={9} md={9} className="text-center mt-3">

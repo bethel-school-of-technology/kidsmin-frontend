@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Row, Col } from "react-bootstrap";
 
 import './homepage.css';
@@ -11,14 +11,24 @@ const members = [
 ]
 
 
-function HomePage( props ) {
+function HomePage() {
+    const [count, setCount] = useState([])
+    useEffect(() => {
+        fetch("https://localhost:3000/members")
+        .then(data => data.json())
+        .then(count => {
+            let c = count.length;
+            setCount(c);
+        })
+    }, [])
+
     return (
         <Container fluid>
             <Row>
                 {/* <Col sm={1}></Col> */}
                 <Col xs={4} sm={4} className="text-center">
                     <div className="customShape ml-3 layer1">
-                        <h2 className="layer2">4</h2>
+                        <h2 className="layer2">{count}</h2>
                         {/* This number should represent how many members are in database. */}
                     </div>
                 </Col>
@@ -49,7 +59,7 @@ function HomePage( props ) {
             <Row>
                 <Col xs={3}></Col>
                 <Col xs={6} className="customButton1 mt-5 mb-3 text-center">
-                    <h1 className="update">Update</h1>
+                    <button type="submit" className="update">Update</button>
                 </Col>
                 <Col xs={3}></Col>
             </Row>

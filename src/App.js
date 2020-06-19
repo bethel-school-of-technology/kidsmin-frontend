@@ -17,12 +17,12 @@ import './App.css';
 
 function App() {
 
-    // If not logged in return this code
-    // return (
-    //     <Login />
-    // );
-
-    // If logged in return this code
+// If not logged in return this code
+// if (loggedIn === false) {
+//     return(
+//         <Login />
+//     );
+// } else {
     return (
     <Router>
     <Container fluid className="backgroundContainer">
@@ -65,5 +65,6 @@ function App() {
     </Router>
     );
 }
+// }
   
   export default App;

@@ -13,8 +13,8 @@ import Login from './Components/Authorization/Login/login';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Login />
-    {/* <App /> */}
+    {/* <Login /> */}
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

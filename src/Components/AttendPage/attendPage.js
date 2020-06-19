@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { Container, Row, Col } from "react-bootstrap";
 
 import './attendPage.css';
@@ -11,14 +11,51 @@ const members = [
     {id: "4", fName: "Nate", lName: "McCollam", attend: true}
 ]
 
+
 function AttendPage() {
+    const [count, setCount] = useState([]);
+    useEffect(() => {
+        fetch("https://localhost:3000/members")
+        .then(data => data.json())
+        .then(count => {
+            let c = count.length;
+            setCount(c)
+        })
+    }, [])
+
+
+    // const [attendanceCount, setAttendanceCount] = useState([]);
+
+    // useEffect(() => {
+    //     setAttendanceCount(members.filter(
+    //         attendanceFiltered => attendanceFiltered.attend === true)
+    //         .then(count => {
+    //             let c = count.length;
+    //             setAttendanceCount(c);
+    //         })
+    //     )   
+    // }, [])
+
+    // members.filter(member => member.attend === true).map(attendingCount => {
+    //     let ac = attendingCount.length;
+    //     setAttendanceCount(ac);
+    // })
+    
+    // useEffect(() => {
+    //     setFilteredCountries(
+    //       countries.filter(
+    //         country => country
+    //           .name
+    //           .toLowerCase()
+    //           .includes(countriesFilter.toLowerCase())));
+    //   }, [countries, countriesFilter]);
 
     return (
         <Container fluid>
             <Row className="mt-5">
                 <Col xs={3} sm={3} className="text-center">
                     <div className="customShape2 layer1">
-                        <h2 className="layer2">2</h2>
+                        <h2 className="layer2">{count}</h2>
                         {/* This number should represent how many members are attending */}
                     </div>
                 </Col>
