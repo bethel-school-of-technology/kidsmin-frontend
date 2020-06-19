@@ -16,15 +16,14 @@ function HomePage() {
     }, [])
 
     useEffect(() => {
-        fetch('http://localhost:3000/member/count')
+        fetch('http://localhost:3000/members')
         .then(data => data.json())
-        .then(members => {
-            let c = members.length;
-            setCount(data.count)
-    });
+        .then(count => {
+            let c = count.length;
+            setCount(c)
+    })
+}, [])
     
-
-
 
     return (
         <Container fluid>
