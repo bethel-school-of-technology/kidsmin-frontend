@@ -38,6 +38,7 @@ function AddMember () {
     };
     const onSubmit = event => {
         event.preventDefault();
+
         fetch("http://localhost:3000/members", {
 
             method: "POST",
@@ -54,6 +55,7 @@ function AddMember () {
                 "Content-type":'application/json'
             }
         })
+
     }
 
     return (

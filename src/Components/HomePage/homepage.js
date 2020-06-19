@@ -1,18 +1,32 @@
 import React, {useState, useEffect} from 'react';
 import { Container, Row, Col } from "react-bootstrap";
+import { Link } from 'react-router-dom';
+
 
 import './homepage.css';
 
 
-function HomePage( props ) {
 
-    const [members, setMembers] = useState([])
 
-    useEffect(() => {
-        fetch('http://localhost:3000/members')
-        .then(data => data.json())
-        .then(members => setMembers(members))
-    }, [])
+
+function HomePage( ) {
+  
+   
+
+        const [members, setMembers] = useState([])
+     
+    
+        useEffect(() => {
+            fetch('http://localhost:3000/members')
+            .then(data => data.json())
+            .then(members => setMembers(members))
+            // .then(members => {
+            //     let c =members.length; 
+            //     setCount(data.count)
+            // });
+           
+         }, [])
+
 
     return (
         <Container fluid>

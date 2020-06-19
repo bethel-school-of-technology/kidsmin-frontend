@@ -2,18 +2,23 @@ import React, {useState, useEffect} from 'react';
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from 'react-router-dom';
 
+
 import '../EditMember/editMember.css';
 
 
+
+
 function DeleteMember() {
+   
 
-    const [members, setMembers] = useState([])
+        const [members, setMembers] = useState([])
+    
+        useEffect(() => {
+            fetch('http://localhost:3000/members')
+            .then(data => data.json())
+            .then(members => setMembers(members))
+        }, [])
 
-    useEffect(() => {
-        fetch('http://localhost:3000/members')
-        .then(data => data.json())
-        .then(members => setMembers(members))
-    }, [])
     
     return (
         <Container fluid>
