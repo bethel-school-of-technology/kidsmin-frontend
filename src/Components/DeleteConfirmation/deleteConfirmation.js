@@ -1,10 +1,13 @@
+
 import React, {useState} from 'react';
+
 import { Container, Row, Col } from "react-bootstrap";
 import '../AddMember/addMember.css';
 import {useParams} from "react-router-dom"; 
 
 import '../AddMember/addMember.css'
 import { Redirect } from 'react-router-dom';
+
 
 
 // Will need to get the idmembers from param and then get that user from database to confirm name before deletion
@@ -80,12 +83,15 @@ function DeleteConfirmation() {
 
 
 
+
     return (
         <Container fluid>
             <Row className="mt-3 mb-5">
                 <Col sm={1}></Col>
                 <Col sm={10} className="text-center">
+
                     <h1>Delete {firstName + " " + lastName}</h1>
+
                 </Col>
                 <Col sm={1}></Col>
             </Row>
@@ -108,10 +114,12 @@ function DeleteConfirmation() {
                         </Col>
                         <Col sm={2}></Col>
                         <Col sm={6} className="text-right">
+
                             <input type="text" placeholder={firstName} name="firstName" className="my-2 inputData text-center" onChange={handleFirst} value={firstName} />
                         </Col>
                         <Col sm={6} className="text-left">
                             <input type="text" placeholder={lastName} name="lastName" className="my-2 inputData text-center" onChange={handleLast} value={lastName} />
+
                         </Col>
                     </Row>
                 </Col>

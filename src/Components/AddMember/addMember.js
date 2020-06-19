@@ -1,18 +1,61 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Row, Col } from "react-bootstrap";
+
 
 import './addMember.css';
 
-function AddMember() {
-   
-    const handleSubmit = (event) => {
+function AddMember () {
+    const [firstName, setFirstName] = useState('')
+    const [lastName, setLastName] = useState('')
+    const [membersAge, setMembersAge] = useState('')
+    const [guardianNameFirst, setGuardianNameFirst] = useState('')    
+    const [guardianLastName, setGuardianLastName] = useState('')    
+    const [guardianPhone, setGuardianPhone] = useState('')  
+
+    const handleFirstName = event => {
+        setFirstName(event.target.value);
+        console.log(firstName);
+    };
+    const handleLastName = event => {
+        setLastName(event.target.value);
+        console.log(lastName);
+    };
+    const handleMembersAge = event => {
+        setMembersAge(event.target.value);
+        console.log(membersAge);
+    };
+    const handleGuardianNameFirst = event => {
+        setGuardianNameFirst(event.target.value);
+        console.log(guardianNameFirst);  
+    };
+    const handleGuardianLastName = event => {
+        setGuardianLastName(event.target.value);
+        console.log(guardianLastName);   
+    };
+    const handleGuardianPhone = event => {
+        setGuardianPhone(event.target.value);        
+        console.log(guardianPhone);    
+    };
+    const onSubmit = event => {
         event.preventDefault();
-        const data = new FormData(event.target);
-        
-        fetch('http://localhost:3000/members/', {
-          method: 'post',
-          body: data
-        }); 
+
+        fetch("http://localhost:3000/members", {
+
+            method: "POST",
+
+            body: JSON.stringify({
+                firstName,
+                lastName,
+                membersAge,
+                guardianNameFirst, 
+                guardianLastName,   
+                guardianPhone
+            }),
+            headers: {
+                "Content-type":'application/json'
+            }
+        })
+
     }
 
     return (
@@ -24,7 +67,7 @@ function AddMember() {
                 </Col>
                 <Col sm={2}></Col>
             </Row>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={e => this.submit(e)}>
             <Row className="mt-5 text-center">
                 <Col sm={12} className="form-group text-center">
                     <Row className="text-center">
@@ -34,16 +77,37 @@ function AddMember() {
                         </Col>
                         <Col sm={2}></Col>
                         <Col sm={6} className="text-right">
-                            <input type="text" placeholder="First Name" required name="firstName" className="my-2 inputData text-center" />
+                            <input 
+                                value={firstName}
+                                onChange={handleFirstName}
+                                placeholder="First Name" 
+                                type="text"
+                                name="firstName"
+                                required 
+                                className="my-2 inputData text-center" />
                         </Col>
                         <Col sm={6} className="text-left">
-                            <input type="text" placeholder="Last Name" required name="lastName" className="my-2 inputData text-center" />
+                            <input 
+                                value={lastName}
+                                onChange={handleLastName}
+                                placeholder="Last Name" 
+                                type="text"
+                                name="lastName" 
+                                required   
+                                className="my-2 inputData text-center" />
                         </Col>
                     </Row>
                     <Row>
                         <Col sm={2} className=""></Col>
                         <Col sm={8} className="text-center">
-                            <input type="number" placeholder="Child's Age" required name="membersAge" className="inputData text-center my-2" />
+                            <input  
+                                value={membersAge}
+                                onChange={handleMembersAge}
+                                placeholder="Child's Age" 
+                                type="number"
+                                name="membersAge"
+                                required  
+                                className="inputData text-center my-2" />
                         </Col>
                         <Col sm={2}></Col>
                     </Row>
@@ -55,16 +119,37 @@ function AddMember() {
                         </Col>
                         <Col sm={2}></Col>
                         <Col sm={6} className="text-right">
-                            <input type="text" placeholder="Guardian's First Name" required name="guardianNameFirst" className="my-2 inputData text-center" />
+                            <input  
+                                value={guardianNameFirst}
+                                onChange={handleGuardianNameFirst} 
+                                placeholder="Guardian's First Name" 
+                                type="text"
+                                name="guardianNameFirst" 
+                                required 
+                                className="my-2 inputData text-center" />
                         </Col>
                         <Col sm={6} className="text-left">
-                            <input type="text" placeholder="Guardian's Last Name" required name="guardianLastName" className="my-2 inputData text-center" />
+                            <input 
+                                value={guardianLastName}
+                                onChange={handleGuardianLastName} 
+                                placeholder="Guardian's Last Name" 
+                                type="text"
+                                name="guardianLastName"  
+                                required 
+                                className="my-2 inputData text-center" />
                         </Col>
                     </Row>
                     <Row>
                         <Col sm={2} className=""></Col>
                         <Col sm={8} className="text-center">
-                            <input type="phone" placeholder="Guardian's Phone" required name="guardianPhone" className="my-2 inputData text-center" />
+                            <input  
+                                value={guardianPhone}
+                                onChange={handleGuardianPhone} 
+                                placeholder="Guardian's Phone" 
+                                type="phone"
+                                name="guardianPhone" 
+                                required 
+                                className="my-2 inputData text-center" />
                         </Col>
                         <Col sm={2}></Col>
                     </Row>
@@ -94,7 +179,7 @@ function AddMember() {
                     <Row className="mt-5">
                         <Col sm={4} className=""></Col>
                         <Col sm={4} className="my-2 text-center">
-                            <button type="submit" className="formSubmitBtn">SUBMIT</button>
+                            <button type="submit" className="formSubmitBtn" onClick = {onSubmit}>SUBMIT</button>
                         </Col>
                         <Col sm={4}></Col>
                     </Row>
@@ -103,6 +188,6 @@ function AddMember() {
         </form>
         </Container>
     );
-}
+}  
 
 export default AddMember;

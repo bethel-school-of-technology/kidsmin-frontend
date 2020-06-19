@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Container, Col, Row } from 'react-bootstrap';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import HomePage from './Components/HomePage/homepage';
@@ -11,6 +11,7 @@ import DeleteConfirmation from './Components/DeleteConfirmation/deleteConfirmati
 import Login from './Components/Authorization/Login/login';
 
 import './App.css';
+
 
 
 
@@ -78,6 +79,7 @@ class App extends React.Component {
 
 
     }
+
 }
 
 

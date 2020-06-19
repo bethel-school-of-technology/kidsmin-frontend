@@ -7,6 +7,7 @@ import '../EditMember/editMember.css';
 
 
 
+
 function DeleteMember() {
    
 
@@ -17,6 +18,7 @@ function DeleteMember() {
             .then(data => data.json())
             .then(members => setMembers(members))
         }, [])
+
     
     return (
         <Container fluid>
