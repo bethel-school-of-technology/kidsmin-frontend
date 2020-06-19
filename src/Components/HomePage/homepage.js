@@ -14,6 +14,7 @@ function HomePage( ) {
    
 
         const [members, setMembers] = useState([])
+        //const [count, setCount] = useState([]); 
      
     
         useEffect(() => {
@@ -22,8 +23,9 @@ function HomePage( ) {
             .then(members => setMembers(members))
             // .then(members => {
             //     let c =members.length; 
-            //     setCount(data.count)
-            // });
+            //     setCount(members.count)
+            // })
+            
            
          }, [])
 

@@ -54,8 +54,14 @@ function AddMember () {
             headers: {
                 "Content-type":'application/json'
             }
-        })
-
+        }).then(res => {
+            console.log(res);
+            if (res.status === 200) {
+                alert("Member Added");
+                
+                
+            }
+        }); 
     }
 
     return (

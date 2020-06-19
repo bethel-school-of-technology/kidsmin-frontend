@@ -85,7 +85,9 @@ function EditMemberDetails() {
             </Row>
         {/* <form className="text-center" onSubmit={e => this.submit(e)}></form> */}
             <Row className="mt-5 text-center">
+                
                 <Col sm={12} className="form-group text-center">
+                
                     <Row className="text-center">
                         <Col sm={2} className=""></Col>
                         <Col sm={8} className="text-center">
@@ -93,7 +95,7 @@ function EditMemberDetails() {
                         </Col>
                         <Col sm={2}></Col>
                         <Col sm={6} className="text-right">
-                            <input type="text" placeholder={firstName} className="my-2 inputData text-center" onChange={handleFirst} value={firstName} />
+                            <input type="text" key={firstName} className="my-2 inputData text-center" onChange={handleFirst} value={firstName} />
                         </Col>
                         <Col sm={6} className="text-left">
                             <input type="text" placeholder={lastName} className="my-2 inputData text-center" onChange={handleLast} value={lastName} />
@@ -161,6 +163,6 @@ function EditMemberDetails() {
             </Row>
         </Container>
     );
-
+                
 }
 export default EditMemberDetails;

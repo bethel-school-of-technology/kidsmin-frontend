@@ -45,8 +45,9 @@ let history = useHistory();
                     
                 }
                 else {
-                    if (res.status === 304){
-                    alert("Logged Out"); 
+                    console.log(res);
+                    if (res.ok === false) {
+                    alert("Incorrect Login"); 
                     }
                    // history.push("/login")
                 }
@@ -60,7 +61,12 @@ let history = useHistory();
                  
                 method: "GET", 
                
-            }) 
+            }).then(res => {
+                console.log(res); 
+                if(res.status === 200) {
+                    alert ("Logged Out");
+                }
+            })
         }
 
         return (
