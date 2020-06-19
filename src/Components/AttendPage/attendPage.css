@@ -1,57 +1,359 @@
-.divider{ 
-    display: flex;
-    justify-content: center;
-    align-items: center;    
+/* // Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .smallTitle{
+        font-size: 2.5em;
+        -webkit-text-stroke: 1px black;
+    }
+
+    .divider{ 
+        display: flex;
+        justify-content: center;
+        align-items: center;    
+    }
+    
+    .divider::before {
+        background: linear-gradient(to right, rgba(240,240,240,0), #FE7634);
+        margin-right: 0vh;
+        border-radius: 0em;
+        content: '';
+        display: block;
+        height: 1em;
+        min-width: 50%;
+    }
+    
+    .divider::after {
+        background: linear-gradient(to left, rgba(240,240,240,0), #FE7634);
+        margin-left: 0vh;
+        border-radius: 0em;
+        content: '';
+        display: block;
+        height: 1em;
+        min-width: 50%;
+    } 
+    
+    .customShape2{
+        background-image: url('../../img/pow-hi.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 250px;
+        width: 100%;
+        position: absolute;
+    }
+    
+    .layer1{
+        position: absolute;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .layer2{
+        position: absolute;
+        z-index: 2;
+        align-self: center;
+        justify-self: center;
+        justify-content: center;
+        max-height: 1em;
+    }
+    
+    h1 {
+        max-height: 1em;
+    }
 }
 
-.divider::before {
-    background: linear-gradient(to right, rgba(240,240,240,0), #FE7634);
-    margin-right: 0vh;
-    border-radius: 0em;
-    content: '';
-    display: block;
-    height: 1em;
-    min-width: 50%;
+
+
+
+
+
+
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .smallTitle{
+        font-size: 3em;
+        -webkit-text-stroke: 2px black;
+    }
+    
+    .divider{ 
+        display: flex;
+        justify-content: center;
+        align-items: center;    
+    }
+    
+    .divider::before {
+        background: linear-gradient(to right, rgba(240,240,240,0), #FE7634);
+        margin-right: 0vh;
+        border-radius: 0em;
+        content: '';
+        display: block;
+        height: 1em;
+        min-width: 50%;
+    }
+    
+    .divider::after {
+        background: linear-gradient(to left, rgba(240,240,240,0), #FE7634);
+        margin-left: 0vh;
+        border-radius: 0em;
+        content: '';
+        display: block;
+        height: 1em;
+        min-width: 50%;
+    } 
+    
+    .customShape2{
+        background-image: url('../../img/pow-hi.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 250px;
+        width: 100%;
+        position: absolute;
+    }
+    
+    .layer1{
+        position: absolute;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .layer2{
+        position: absolute;
+        z-index: 2;
+        align-self: center;
+        justify-self: center;
+        justify-content: center;
+        max-height: 1em;
+    }
+    
+    h1 {
+        max-height: 1em;
+    }
 }
 
-.divider::after {
-    background: linear-gradient(to left, rgba(240,240,240,0), #FE7634);
-    margin-left: 0vh;
-    border-radius: 0em;
-    content: '';
-    display: block;
-    height: 1em;
-    min-width: 50%;
-} 
 
-.customShape2{
-    background-image: url('../../img/pow-hi.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 250px;
-    width: 100%;
-    position: absolute;
+
+
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .smallTitle{
+        font-size: 4em;
+        -webkit-text-stroke: 2px black;
+    }
+    
+    .divider{ 
+        display: flex;
+        justify-content: center;
+        align-items: center;    
+    }
+    
+    .divider::before {
+        background: linear-gradient(to right, rgba(240,240,240,0), #FE7634);
+        margin-right: 0vh;
+        border-radius: 0em;
+        content: '';
+        display: block;
+        height: 1em;
+        min-width: 50%;
+    }
+    
+    .divider::after {
+        background: linear-gradient(to left, rgba(240,240,240,0), #FE7634);
+        margin-left: 0vh;
+        border-radius: 0em;
+        content: '';
+        display: block;
+        height: 1em;
+        min-width: 50%;
+    } 
+    
+    .customShape2{
+        background-image: url('../../img/pow-hi.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 250px;
+        width: 100%;
+        position: absolute;
+    }
+    
+    .layer1{
+        position: absolute;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .layer2{
+        position: absolute;
+        z-index: 2;
+        align-self: center;
+        justify-self: center;
+        justify-content: center;
+        max-height: 1em;
+    }
+    
+    h1 {
+        max-height: 1em;
+    }
+
+    .smallerFont{
+        font-size: 3em;
+        margin-top: -0.25em;
+        -webkit-text-stroke: 2px black;
+    }
 }
 
-.layer1{
-    position: absolute;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+
+
+
+
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .smallTitle{
+        font-size: 4em;
+        -webkit-text-stroke: 2px black;
+    }
+    
+    .divider{ 
+        display: flex;
+        justify-content: center;
+        align-items: center;    
+    }
+    
+    .divider::before {
+        background: linear-gradient(to right, rgba(240,240,240,0), #FE7634);
+        margin-right: 0vh;
+        border-radius: 0em;
+        content: '';
+        display: block;
+        height: 1em;
+        min-width: 50%;
+    }
+    
+    .divider::after {
+        background: linear-gradient(to left, rgba(240,240,240,0), #FE7634);
+        margin-left: 0vh;
+        border-radius: 0em;
+        content: '';
+        display: block;
+        height: 1em;
+        min-width: 50%;
+    } 
+    
+    .customShape2{
+        background-image: url('../../img/pow-hi.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 250px;
+        width: 100%;
+        position: absolute;
+    }
+    
+    .layer1{
+        position: absolute;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .layer2{
+        position: absolute;
+        z-index: 2;
+        align-self: center;
+        justify-self: center;
+        justify-content: center;
+        max-height: 1em;
+    }
+    
+    h1 {
+        max-height: 1em;
+    }
+
+    .smallerFont{
+        font-size: 3.25em;
+        margin-top: -0.25em;
+        -webkit-text-stroke: 2px black;
+    }
 }
 
-.layer2{
-    position: absolute;
-    z-index: 2;
-    align-self: center;
-    justify-self: center;
-    justify-content: center;
-    max-height: 1em;
-}
 
-h1 {
-    max-height: 1em;
+
+
+/* extra large screens */
+@media (min-width: 1200px) {    
+    .smallTitle{
+        font-size: 5.5em;
+    }
+
+    .divider{ 
+        display: flex;
+        justify-content: center;
+        align-items: center;    
+    }
+    
+    .divider::before {
+        background: linear-gradient(to right, rgba(240,240,240,0), #FE7634);
+        margin-right: 0vh;
+        border-radius: 0em;
+        content: '';
+        display: block;
+        height: 1em;
+        min-width: 50%;
+    }
+    
+    .divider::after {
+        background: linear-gradient(to left, rgba(240,240,240,0), #FE7634);
+        margin-left: 0vh;
+        border-radius: 0em;
+        content: '';
+        display: block;
+        height: 1em;
+        min-width: 50%;
+    } 
+    
+    .customShape2{
+        background-image: url('../../img/pow-hi.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 250px;
+        width: 100%;
+        position: absolute;
+    }
+    
+    .layer1{
+        position: absolute;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .layer2{
+        position: absolute;
+        z-index: 2;
+        align-self: center;
+        justify-self: center;
+        justify-content: center;
+        max-height: 1em;
+    }
+    
+    h1 {
+        max-height: 1em;
+    }
 }

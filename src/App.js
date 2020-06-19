@@ -28,17 +28,17 @@ function App() {
     <Container fluid className="backgroundContainer">
         <Row>
             <Col sm={1}></Col>
-            <Col sm={10}>
+            <Col xs={12} sm={10}>
                 <Row>
-                    <Col sm={12} className="navContainer text-center">
+                    <Col xs={12} sm={12} className="navContainer text-center">
                         <Row className="justify-content-center align-self-center sticky-top">
-                            <Col sm={1}></Col>
-                            <Col sm={2} className="customLink"><Link className="links" to="/members"><h7>Home</h7></Link></Col>
-                            <Col sm={2} className="customLink"><Link className="links" to="/add"><h7>Create</h7></Link></Col>
-                            <Col sm={2} className="customLink"><Link className="links" to="/edit"><h7>Edit</h7></Link></Col>
-                            <Col sm={2} className="customLink"><Link className="links" to="/delete"><h7>Delete</h7></Link></Col>
-                            <Col sm={2} className="customLink"><Link className="links" to="/attendance"><h7>Attend</h7></Link></Col>
-                            <Col sm={1}></Col>
+                            <Col xs={1}></Col>
+                            <Col xs={2} sm={2} className="customLink"><Link className="links" to="/members"><h6>Home</h6></Link></Col>
+                            <Col xs={2} sm={2} className="customLink"><Link className="links" to="/add"><h6>Create</h6></Link></Col>
+                            <Col xs={2} sm={2} className="customLink"><Link className="links" to="/edit"><h6>Edit</h6></Link></Col>
+                            <Col xs={2} sm={2} className="customLink"><Link className="links" to="/delete"><h6>Delete</h6></Link></Col>
+                            <Col xs={2} sm={2} className="customLink"><Link className="links" to="/attendance"><h6>Attend</h6></Link></Col>
+                            <Col xs={1}></Col>
                         </Row>
                     </Col>
                 </Row>
@@ -47,7 +47,7 @@ function App() {
         </Row>
         <Row>
             <Col sm={1}></Col>
-            <Col sm={10} className="customCol mt-5 mb-5">
+            <Col xs={12} sm={10} className="customCol mt-5 mb-5">
                 <Switch>
                     <Route exact path="/edit" component={EditMember} />
                     <Route exact path="/add" component={AddMember} />
@@ -56,7 +56,6 @@ function App() {
                     <Route path="/edit/:idmembers"  component={EditMemberDetails} />
                     <Route path="/delete/:idmembers" component={DeleteConfirmation} />
                     <Route default path="/members" component={HomePage} />
-                    <Route path="/*" component={() => "404 NOT FOUND"} />
                 </Switch>
             </Col>
             <Col sm={1}></Col>
