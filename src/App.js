@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Col, Row } from 'react-bootstrap';
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, Switch, Redirect } from 'react-router-dom';
 import HomePage from './Components/HomePage/homepage';
 import EditMember from './Components/EditMember/editMember';
 import DeleteMember from './Components/DeleteMember/deleteMember';
@@ -11,7 +11,7 @@ import DeleteConfirmation from './Components/DeleteConfirmation/deleteConfirmati
 import Login from './Components/Authorization/Login/login';
 
 
-import { useHistory } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
 import './App.css';
 
 
@@ -19,7 +19,7 @@ import './App.css';
 
 
 function App() {
-    let history = useHistory();
+    // let history = useHistory();
 
     const Logout = event => {
         event.preventDefault(); 
@@ -27,11 +27,12 @@ function App() {
              
             method: "GET", 
            
-        }).then(res => {
+        })
+        .then(res => {
             console.log(res);
             if (res.status === 200) {
                 alert("Logged Out");
-                history.push("/")
+                // history.push("/")
             } 
         })
     }

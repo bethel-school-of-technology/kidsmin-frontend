@@ -88,7 +88,7 @@ function EditMemberDetails() {
                         </Col>
                         <Col sm={2}></Col>
                         <Col xs={12} xl={6} className="textR">
-                        <input type="text" key={firstName} className="my-2 inputData text-center" onChange={handleFirst} value={firstName} />
+                        <input type="text" placeholder={firstName} className="my-2 inputData text-center" onChange={handleFirst} value={firstName} />
                         </Col>
                         <Col xs={12} xl={6} className="textL">
                         <input type="text" placeholder={lastName} className="my-2 inputData text-center" onChange={handleLast} value={lastName} />

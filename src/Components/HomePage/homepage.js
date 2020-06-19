@@ -60,8 +60,8 @@ function HomePage() {
             </Row>
             <Row>
                 <Col xs={3}></Col>
-                <Col xs={6} className="customButton1 mt-5 mb-3 text-center">
-                    <h1 className="update">Update</h1>
+                <Col xs={6} className="mt-5 mb-3 text-center">
+                    <button type="submit" className="loginBtn">Update</button>
                 </Col>
                 <Col xs={3}></Col>
             </Row>
