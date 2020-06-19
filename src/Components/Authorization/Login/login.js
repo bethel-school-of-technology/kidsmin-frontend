@@ -69,43 +69,43 @@ let history = useHistory();
         }
 
         return (
-            <Container fluid className="backgroundContainer">
+            <Container fluid>
                 <Row>
-                    <Col sm={1}></Col>
-                    <Col sm={10} className="loginCol1 mt-5 mb-5 text-center">
+                    <Col xs={1}></Col>
+                    <Col xs={10} className="loginCol1 mt-5 mb-5 text-center">
                         <h1 id="loginTitle">Welcome to <span id="loginTitle2">KidsMin</span></h1>
                     </Col>
-                    <Col sm={1}></Col>
+                    <Col xs={1}></Col>
                 </Row>
                 <form className="text-center" onSubmit={e => this.submit(e)}>
                 <Row className="text-center">
-                    <Col sm={1}></Col>
-                    <Col sm={10} className="loginCol mt-1">
+                    <Col xs={1}></Col>
+                    <Col xs={10} className="mt-1">
                         <Row className="mt-4">
-                            <Col sm={2} className=""></Col>
-                            <Col sm={8} className="text-center">
+                            <Col lg={2} className=""></Col>
+                            <Col xs={12} lg={8} className="text-center">
                                 <input type="text" name="username" placeholder="Username" className="my-2 inputData text-center" onChange={handleChange} value={Username} />
                             </Col>
-                            <Col sm={2}></Col>
+                            <Col lg={2}></Col>
                         </Row>
                         <Row>
-                            <Col sm={2} className=""></Col>
-                            <Col sm={8} className="text-center">
+                            <Col lg={2} className=""></Col>
+                            <Col xs={12} lg={8} className="text-center">
                                 <input type="password" name="password" placeholder="Password" className="my-2 inputData text-center" onChange={handleChange2} value={Password} />
                             </Col>
-                            <Col sm={2}></Col>
+                            <Col lg={2}></Col>
                         </Row>
                         <br></br>
                         <Row className="mt-5">
-                            <Col sm={4} className=""></Col>
-                            <Col sm={4} className="my-2 text-center">
+                            <Col xs={3} lg={4} className=""></Col>
+                            <Col xm={6} lg={4} className="my-2 text-center">
                                 <button type="submit" className="loginBtn" onClick = {onSubmit} >Login</button>
                                 <button type="submit" className="loginBtn" onClick = {Logout} >Logout</button>
                             </Col>
-                            <Col sm={4}></Col>
+                            <Col xs={3} lg={4}></Col>
                         </Row>  
                     </Col>
-                    <Col sm={1}></Col>
+                    <Col xm={1}></Col>
                 </Row>
                 </form>
             </Container>

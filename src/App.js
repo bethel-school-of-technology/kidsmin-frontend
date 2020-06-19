@@ -20,7 +20,6 @@ class App extends React.Component {
     render() {
         return (
             <Router>
-                <Login />
                 <Container fluid className="backgroundContainer">
                     <Row>
                         <Col sm={1}></Col>
@@ -28,13 +27,12 @@ class App extends React.Component {
                             <Row>
                                 <Col sm={12} className="navContainer text-center">
                                     <Row className="justify-content-center align-self-center sticky-top">
-                                        <Col sm={1}></Col>
-                                        <Col sm={2} className="customLink"><Link className="links" to="/members"><h7>Home</h7></Link></Col>
-                                        <Col sm={2} className="customLink"><Link className="links" to="/add"><h7>Create</h7></Link></Col>
-                                        <Col sm={2} className="customLink"><Link className="links" to="/edit"><h7>Edit</h7></Link></Col>
-                                        <Col sm={2} className="customLink"><Link className="links" to="/delete"><h7>Delete</h7></Link></Col>
-                                        <Col sm={2} className="customLink"><Link className="links" to="/attendance"><h7>Attend</h7></Link></Col>
-                                        <Col sm={1}></Col>
+                                        <Col xs={2} sm={2} className="customLink"><Link className="links" to="/login"><h6>Login</h6></Link></Col>
+                                        <Col xs={2} sm={2} className="customLink"><Link className="links" to="/members"><h6>Home</h6></Link></Col>
+                                        <Col xs={2} sm={2} className="customLink"><Link className="links" to="/add"><h6>Create</h6></Link></Col>
+                                        <Col xs={2} sm={2} className="customLink"><Link className="links" to="/edit"><h6>Edit</h6></Link></Col>
+                                        <Col xs={2} sm={2} className="customLink"><Link className="links" to="/delete"><h6>Delete</h6></Link></Col>
+                                        <Col xs={2} sm={2} className="customLink"><Link className="links" to="/attendance"><h6>Attend</h6></Link></Col>
                                     </Row>
                                 </Col>
                             </Row>
@@ -43,7 +41,7 @@ class App extends React.Component {
                     </Row>
                     <Row>
                         <Col sm={1}></Col>
-                        <Col sm={10} className="customCol mt-5 mb-5">
+                        <Col xs={12} sm={10} className="customCol mt-5 mb-5">
                             <Switch>
                                 <Route exact path="/edit" component={EditMember} />
                                 <Route exact path="/add" component={AddMember} />
@@ -51,8 +49,8 @@ class App extends React.Component {
                                 <Route path="/attendance" component={AttendPage} />
                                 <Route path="/edit/:idmembers" component={EditMemberDetails} />
                                 <Route path="/delete/:idmembers" component={DeleteConfirmation} />
-                                <Route default path="/members" component={HomePage} />
-                                <Route path="/*" component={() => "404 NOT FOUND"} />
+                                <Route path="/members" component={HomePage} />
+                                <Route default path="/login" component={Login} />
                             </Switch>
                         </Col>
                         <Col sm={1}></Col>

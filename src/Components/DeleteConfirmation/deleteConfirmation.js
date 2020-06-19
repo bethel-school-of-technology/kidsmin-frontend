@@ -62,22 +62,22 @@ function DeleteConfirmation() {
     return (
         <Container fluid>
             <Row className="mt-3 mb-5">
-                <Col sm={1}></Col>
-                <Col sm={10} className="text-center">
+                <Col lg={1}></Col>
+                <Col xs={12} lg={10} className="text-center">
 
-                    <h1>Delete {firstName + " " + lastName}</h1>
+                    <h1 className="smallerFont">Delete {firstName + " " + lastName}</h1>
 
                 </Col>
-                <Col sm={1}></Col>
+                <Col lg={1}></Col>
             </Row>
             <br></br>
             <br></br>
             <Row className="mt-5 shrink">
-                <Col sm={2}></Col>
-                <Col sm={8} className="text-center">
+                <Col sm={1}></Col>
+                <Col sm={10} className="text-center">
                     <h7 id="warning-title">Re-enter the child's name below to confirm deletion</h7>
                 </Col>
-                <Col sm={2}></Col>
+                <Col sm={1}></Col>
             </Row>
         <form>
             <Row className="text-center">
@@ -88,11 +88,11 @@ function DeleteConfirmation() {
                             <h3 className="dividerTitle text-center">Child's Info</h3>
                         </Col>
                         <Col sm={2}></Col>
-                        <Col sm={6} className="text-right">
+                        <Col xs={12} xl={6} className="textR">
 
                             <input type="text" placeholder={firstName} name="firstName" className="my-2 inputData text-center" onChange={handleFirst} value={firstName} />
                         </Col>
-                        <Col sm={6} className="text-left">
+                        <Col xl={6} className="textL">
                             <input type="text" placeholder={lastName} name="lastName" className="my-2 inputData text-center" onChange={handleLast} value={lastName} />
 
                         </Col>
