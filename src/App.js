@@ -10,14 +10,32 @@ import EditMemberDetails from './Components/EditMemberDetails/editMemberDetails'
 import DeleteConfirmation from './Components/DeleteConfirmation/deleteConfirmation';
 import Login from './Components/Authorization/Login/login';
 
+
+import { useHistory } from 'react-router-dom';
 import './App.css';
 
 
 
 
 
-class App extends React.Component {
-    render() {
+function App() {
+    let history = useHistory();
+
+    const Logout = event => {
+        event.preventDefault(); 
+        fetch("http://localhost:3000/users/logout", { 
+             
+            method: "GET", 
+           
+        }).then(res => {
+            console.log(res);
+            if (res.status === 200) {
+                alert("Logged Out");
+                history.push("/")
+            } 
+        })
+    }
+
         return (
             <Router>
                 <Container fluid className="backgroundContainer">
@@ -27,7 +45,7 @@ class App extends React.Component {
                             <Row>
                                 <Col sm={12} className="navContainer text-center">
                                     <Row className="justify-content-center align-self-center sticky-top">
-                                        <Col xs={2} sm={2} className="customLink"><Link className="links" to="/login"><h6>Login</h6></Link></Col>
+                                        <Col xs={2} sm={2} className="customLink"><Link className="links" to="/"><h6>Login</h6></Link></Col>
                                         <Col xs={2} sm={2} className="customLink"><Link className="links" to="/members"><h6>Home</h6></Link></Col>
                                         <Col xs={2} sm={2} className="customLink"><Link className="links" to="/add"><h6>Create</h6></Link></Col>
                                         <Col xs={2} sm={2} className="customLink"><Link className="links" to="/edit"><h6>Edit</h6></Link></Col>
@@ -43,6 +61,7 @@ class App extends React.Component {
                         <Col sm={1}></Col>
                         <Col xs={12} sm={10} className="customCol mt-5 mb-5">
                             <Switch>
+                                <Route default exact path="/" component={Login} />
                                 <Route exact path="/edit" component={EditMember} />
                                 <Route exact path="/add" component={AddMember} />
                                 <Route exact path="/delete" component={DeleteMember} />
@@ -50,14 +69,20 @@ class App extends React.Component {
                                 <Route path="/edit/:idmembers" component={EditMemberDetails} />
                                 <Route path="/delete/:idmembers" component={DeleteConfirmation} />
                                 <Route path="/members" component={HomePage} />
-                                <Route default path="/login" component={Login} />
                             </Switch>
                         </Col>
                         <Col sm={1}></Col>
                     </Row>
+                    <Row className="mt-3">
+                            <Col xs={3} lg={4} className=""></Col>
+                            <Col xm={6} lg={4} className="my-2 text-center">
+                                <button type="submit" className="loginBtn mb-3" onClick={Logout} >Logout</button>
+                            </Col>
+                            <Col xs={3} lg={4}></Col>
+                        </Row>
                 </Container>
             </Router>
         );
     }
-}
+
 export default App;

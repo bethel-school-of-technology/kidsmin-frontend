@@ -1,9 +1,9 @@
 import React, {useState } from 'react';
 import { Container, Col, Row } from 'react-bootstrap';
-import App  from "../../../App"; 
 import {useHistory} from "react-router-dom";
+import { Link } from 'react-router-dom';
 import './login.css'
-import HomePage from '../../HomePage/homepage';
+
 
 
 
@@ -53,20 +53,6 @@ let history = useHistory();
             })
             
         }
-        
-        const Logout = event => {
-            event.preventDefault(); 
-            fetch("http://localhost:3000/users/logout", { 
-                 
-                method: "GET", 
-               
-            }).then(res => {
-                console.log(res); 
-                if(res.status === 200) {
-                    alert ("Logged Out");
-                }
-            })
-        }
 
         return (
             <Container fluid>
@@ -99,8 +85,7 @@ let history = useHistory();
                         <Row className="mt-5">
                             <Col xs={3} lg={4} className=""></Col>
                             <Col xm={6} lg={4} className="my-2 text-center">
-                                <button type="submit" className="loginBtn" onClick = {onSubmit} >Login</button>
-                                <button type="submit" className="loginBtn" onClick = {Logout} >Logout</button>
+                                <button type="submit" className="loginBtn" onClick={onSubmit}>Login</button>
                             </Col>
                             <Col xs={3} lg={4}></Col>
                         </Row>  
